@@ -1,3 +1,8 @@
 /* 
   Generic styles used across the site go here in base.css.
 */
+
+body {
+  background-color: black;
+  color: white;
+}
