@@ -11,7 +11,10 @@ See it live at:
 
 ---
 
-Bootcamp Collaborative Webpage (better name?? 😅) aims to make the experience of collaborating on group projects and contributing to open source beginner-friendly. You can make any kind of contribution, no matter how small or big. To keep it simple, we will use HTML, CSS and JavaScript - no frameworks or libraries. Therefore, getting started isn't very complicated, and if you need help just reach out in the Discord!
+Bootcamp Collaborative Webpage (better name?? 😅) aims to make the experience of collaborating on group projects and 
+contributing to open source beginner-friendly. You can make any kind of contribution, no matter how small or big. To 
+keep it simple, we will use HTML, CSS and JavaScript - no frameworks or libraries. Therefore, getting started isn't 
+very complicated, and if you need help just reach out in the [Discord](https://discord.com/channels/684009642984341525/959014685586382879)!
 
 What you can contribute to this project?
 
