@@ -1,5 +1,5 @@
 # :computer: Scrimba Bootcamp Collaborative Webpage
-An opportunity to practice forking, branching, making changes and making pull requests. 
+An opportunity to practice forking, branching, making changes and creating pull requests. 
 
 See it live at: <https://scrimba-bootcamp-rocks.netlify.app/>
 
