@@ -1,7 +1,7 @@
 # :computer: Scrimba Bootcamp Collaborative Webpage
 An opportunity to practice forking, branching, making changes and making pull requests. 
 
-See it live at: 
+See it live at: <https://scrimba-bootcamp-rocks.netlify.app/>
 
 ## :question: What is this?
 
