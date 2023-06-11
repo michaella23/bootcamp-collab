@@ -1,3 +1,207 @@
 /* 
   Generic styles used across the site go here in base.css.
 */
+:root {
+  /* generic document setup */
+  /* typeface */
+  --typeface-sans: 'Karla', sans-serif;
+  --typeface-monospace: 'Inconsolata', monospace;
+
+  /* percentage fonts */
+  --percentage-font-10: 62.5%;
+  --percentage-font-9: 56.25%;
+  --percentage-font-8: 50%;
+  --percentage-font-7: 43.75%;
+
+  /* font size */
+  --font-10: 1rem;
+  --font-12: 1.2rem;
+  --font-14: 1.4rem;
+  --font-16: 1.6rem;
+  --font-18: 1.8rem;
+  --font-20: 2rem;
+  --font-24: 2.4rem;
+  --font-30: 3rem;
+  --font-32: 3.2rem;
+  --font-36: 3.6rem;
+  --font-44: 4.4rem;
+  --font-52: 5.2rem;
+  --font-62: 6.2rem;
+  --font-74: 7.4rem;
+  --font-86: 8.6rem;
+  --font-98: 9.8rem;
+
+  /* font weight */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  /* spacing system */
+  --spacing-2: 0.2rem;
+  --spacing-4: 0.4rem;
+  --spacing-8: 0.8rem;
+  --spacing-12: 1.2rem;
+  --spacing-16: 1.6rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-48: 4.8rem;
+  --spacing-64: 6.4rem;
+  --spacing-80: 8rem;
+  --spacing-96: 9.6rem;
+  --spacing-128: 12.8rem;
+
+  /* border radius */
+  --border-rad-05: 0.5rem;
+  --border-rad-1: 1rem;
+  --border-rad-100: 10rem;
+  --border-rad-round: 50%;
+
+  /* line height */
+  --line-height-1: 1;
+  --line-height-11: 1.1;
+  --line-height-15: 1.5;
+  --line-height-17: 1.7;
+
+  /* letter spacing */
+  --letter-space-n05: -0.5px;
+  --letter-space-n1: -1px;
+  --letter-space-p05: 0.5px;
+  --letter-space-p1: 1px;
+
+  /* color palettes */
+  --clr-shadow: hsl(0, 0%, 8%);
+  --clr-background: hsl(187, 75%, 76%);
+  --clr-background-tint: hsl(187, 75%, 86%);
+  --clr-headline: hsl(0, 0%, 8%);
+  --clr-paragraph: hsl(0, 0%, 20%);
+  --clr-button: hsl(0, 0%, 97%);
+  --clr-button-text: var(--clr-shadow);
+  --clr-button-before: linear-gradient(140deg,
+      hsl(0, 0%, 95%),
+      hsl(0, 0%, 75%));
+  --clr-button-plus: var(--clr-accent-tint);
+  --clr-button-plus-text: var(--clr-shadow);
+  --clr-button-plus-before: linear-gradient(140deg,
+      var(--clr-accent-tint),
+      var(--clr-accent));
+  --clr-button-shadow: var(--clr-shadow);
+  --clr-stroke: hsl(0, 0%, 100%);
+  --clr-highlight: var(--clr-accent-tint);
+  --clr-accent: hsl(53, 100%, 71%);
+  --clr-accent-tint: hsl(53, 100%, 81%);
+  --clr-accent-tintier: ;
+}
+
+html {
+  font-size: var(--percentage-font-10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--clr-shadow);
+}
+
+::selection {
+  background-color: var(--clr-paragraph);
+  color: var(--clr-background-tint);
+}
+
+body {
+  font-family: var(--typeface-sans);
+  font-size: var(--font-18);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-space-n05);
+  background-color: var(--clr-background-tint);
+  color: var(--clr-paragraph);
+}
+
+/* repeatable code */
+.section-padding {
+  padding: var(--spacing-96) 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 120rem;
+  padding: 0 var(--spacing-48);
+}
+
+.container-hero {
+  max-width: 130rem;
+}
+
+.pre-heading {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.8rem;
+  font-family: var(--typeface-monospace);
+  font-size: var(--font-14);
+  font-weight: var(--font-weight-700);
+  line-height: var(--line-height-15);
+  letter-spacing: var(--letter-space-p1);
+  text-transform: uppercase;
+  color: var(--clr-background-tint);
+  background-color: var(--clr-paragraph);
+  margin-bottom: var(--spacing-12);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: var(--font-weight-700);
+  line-height: var(--line-height-11);
+  letter-spacing: var(--letter-space-n1);
+}
+
+.heading-primary {
+  font-size: var(--font-44);
+  margin-bottom: var(--spacing-48);
+}
+
+.heading-secondary {
+  font-size: var(--font-36);
+  margin-bottom: var(--spacing-96);
+}
+
+.heading-tertiary {
+  font-size: var(--font-32);
+  margin-bottom: var(--spacing-32);
+}
+
+.grid {
+  display: grid;
+  column-gap: var(--spacing-48);
+  row-gap: var(--spacing-24);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.link,
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--typeface-monospace);
+  font-weight: var(--font-weight-500);
+  cursor: pointer;
+}
+
+/* helper classes */
+.grid--center-v {
+  align-items: center;
+}
+
+.margin-right-sm {
+  margin-right: var(--spacing-12);
+}
+
+/* sections */
