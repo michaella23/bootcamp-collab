@@ -32,6 +32,10 @@ There can be a lot to learn when getting involved in open-source projects if you
 
 Do you already know about these things? Here is a [great article](https://www.freecodecamp.org/news/a-practical-guide-to-start-opensource-contributions/) to get you started with forking a repository and creating a pull request. If you are comfortable reading documentation, Github is pretty accessible and they have a good section on [working collaboratively](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models) that is worth a read.
 
+See our [CONTRIBUTING](CONTRIBUTING.md) page for how to contribute to our project and the 
+contribution 
+guidelines.
+
 ## Code of Conduct
 
 Be nice, be patient, be helpful. Everyone here is learning and doing their best. Briefly read the [Open Source Etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette) if this is your first time with Open Source.
