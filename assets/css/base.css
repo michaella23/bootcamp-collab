@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Karla:wght@400;500;700&display=swap');
 /* 
-  Generic styles used across the site go here in base.css.
+  Generic styles used across the site go here in base.css, 
+  take a look at the STYLE_GUIDE.md to get a better understanding
+  of CSS Variables and importing fonts & other stylesheets.
 */
 :root {
   /* generic document setup */
@@ -8,13 +10,39 @@
   --typeface-sans: 'Karla', sans-serif;
   --typeface-monospace: 'Inconsolata', monospace;
 
-  /* percentage fonts */
+  /* 
+    percentage fonts, is used for making your life easier, 
+    --percentage-font-10 denotes 10px of 16px, the reason
+    we do this, is that when you start working with REMs/EMs,
+    for responsive design, we don't want to always calculate
+    what is 33.8rems in pixels? 
+    
+    So what we do is set the math to an easy to understand 
+    digit such as 10px, therfore we know that 1rem = 10px 
+    and so 1.6rem must equate to 16px. Easy math right?
+
+    Though why percentage, well, if you set the root font size 
+    to a hard coded unit of measure such as px, when someone 
+    that has accessibilty issues changes their browser to be 
+    40px for exmaple, it will never change, though if set it as 
+    a percentage, the entire site will adjust to 62.5% of the 
+    users preferred font size.
+  */
   --percentage-font-10: 62.5%;
   --percentage-font-9: 56.25%;
   --percentage-font-8: 50%;
   --percentage-font-7: 43.75%;
 
-  /* font size */
+  /* 
+    font size, a range of font sizes that follow a type scale,
+    this is meant to style your fonts in a pleasing manner.
+    It also helps to reduce the guess work of what font size 
+    should I use.
+
+    Font sizes from 1 to 3.6 are considered normal paragraph
+    font sizes, while everything above that, is considered 
+    heading font sizes.
+  */
   --font-10: 1rem;
   --font-12: 1.2rem;
   --font-14: 1.4rem;
@@ -24,20 +52,24 @@
   --font-24: 2.4rem;
   --font-30: 3rem;
   --font-32: 3.2rem;
-  --font-36: 3.6rem;
+  --font-36: 3.6rem; /* end of normal font size */
   --font-44: 4.4rem;
   --font-52: 5.2rem;
   --font-62: 6.2rem;
   --font-74: 7.4rem;
   --font-86: 8.6rem;
-  --font-98: 9.8rem;
+  --font-98: 9.8rem; /* end of heading font size */
 
   /* font weight */
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-700: 700;
 
-  /* spacing system */
+  /* 
+    spacing system, the spacing system follows a similar 
+    design font scaling system, though just we use it for 
+    padding and margins.
+  */
   --spacing-2: 0.2rem;
   --spacing-4: 0.4rem;
   --spacing-8: 0.8rem;
@@ -69,45 +101,72 @@
   --letter-space-p05: 0.5px;
   --letter-space-p1: 1px;
 
+  /* Custom Color Names */
+  --clr-blinding-light-shade-plus: hsl(0, 0%, 75%);
+  --clr-blinding-light-shade: hsl(0, 0%, 95%);
+  --clr-blinding-light: hsl(0, 0%, 100%);
+  --clr-lemon-pastel: hsl(53, 100%, 71%);
+  --clr-lemon-pastel-tint: hsl(53, 100%, 81%);
+  --clr-wet-cement-shade: hsl(0, 0%, 8%);
+  --clr-wet-cement: hsl(0, 0%, 20%);
+
+  /* Contributors Colors */
+  --clr-blueberry-pastel-awcoetzer: hsl(187, 75%, 76%);
+  --clr-blueberry-pastel-tint-awcoetzer: hsl(187, 75%, 86%);
+
   /* color palettes */
-  --clr-shadow: hsl(0, 0%, 8%);
-  --clr-background: hsl(187, 75%, 76%);
-  --clr-background-tint: hsl(187, 75%, 86%);
-  --clr-headline: hsl(0, 0%, 8%);
-  --clr-paragraph: hsl(0, 0%, 20%);
-  --clr-button: hsl(0, 0%, 97%);
+  --clr-shadow: ;
+  --clr-background: var(--clr-blueberry-pastel-awcoetzer);
+  --clr-background-tint: var(--clr-blueberry-pastel-tint-awcoetzer);
+  --clr-headline: var(--clr-wet-cement-shade);
+  --clr-paragraph: var(--clr-wet-cement);
+  --clr-button: var(--clr-blinding-light);
   --clr-button-text: var(--clr-shadow);
   --clr-button-before: linear-gradient(140deg,
-      hsl(0, 0%, 95%),
-      hsl(0, 0%, 75%));
+      var(--clr-blinding-light-shade),
+      var(--clr-blinding-light-shade-plus)
+      );
   --clr-button-plus: var(--clr-accent-tint);
   --clr-button-plus-text: var(--clr-shadow);
   --clr-button-plus-before: linear-gradient(140deg,
       var(--clr-accent-tint),
       var(--clr-accent));
   --clr-button-shadow: var(--clr-shadow);
-  --clr-stroke: hsl(0, 0%, 100%);
+  --clr-stroke: var(--clr-blinding-light);
   --clr-highlight: var(--clr-accent-tint);
-  --clr-accent: hsl(53, 100%, 71%);
-  --clr-accent-tint: hsl(53, 100%, 81%);
-  --clr-accent-tintier: ;
+  --clr-accent: var(--clr-lemon-pastel);
+  --clr-accent-tint: var(--clr-lemon-pastel-tint);
 }
 
+/* Setting the percentage font for the site here */
 html {
   font-size: var(--percentage-font-10);
 }
 
+/* 
+  Doing a small reset to remove all padding and margins and 
+  setting the box model to border box for better designs
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 
+  When you focus an element, we sometimes want the 
+  focus to follow the curves of a buttons radius, 
+  this is how you do that by setting the box-shadow
+*/
 *:focus {
   outline: none;
   box-shadow: inset 0 0 0 2px var(--clr-shadow);
 }
 
+/* 
+  whenever you select something on your page by dragging 
+  your cursor over it, this should control that.
+*/
 ::selection {
   background-color: var(--clr-paragraph);
   color: var(--clr-background-tint);
@@ -124,13 +183,27 @@ body {
 }
 
 /* repeatable code */
+/* 
+  These are classes that would be repeated through out the document
+  If you find yourself repeating the same sort of style, then best 
+  is to make it a repeatable class once and just the class to the html
+*/
 .section-padding {
   padding: var(--spacing-96) 0;
 }
 
+/*
+  Containers are what control the center align 
+  and width of the content displayed, its also 
+  where we place spacing between the edge of 
+  the document and its content.
+  
+  Why 2 containers?, this is a design choice to 
+  make the hero a little larger in width.
+*/
 .container {
   margin: 0 auto;
-  width: 120rem;
+  max-width: 120rem;
   padding: 0 var(--spacing-48);
 }
 
@@ -138,6 +211,12 @@ body {
   max-width: 130rem;
 }
 
+/* 
+  Pre headings is another design choice, 
+  it just helps to give that little bit 
+  extra info to a heading, of it as a 
+  heading to a heading.
+*/
 .pre-heading {
   display: inline-block;
   padding: 0.15rem 0.45rem;
@@ -196,7 +275,10 @@ body {
   cursor: pointer;
 }
 
-/* helper classes */
+/* 
+  helper classes, are just small little helpers
+  that provide a specific function
+*/
 .grid--center-v {
   align-items: center;
 }
@@ -205,4 +287,6 @@ body {
   margin-right: var(--spacing-12);
 }
 
-/* sections */
+.center-text {
+  text-align: center;
+}

@@ -1,6 +1,11 @@
 @import url('./base.css');
 /* 
-  Only styles for index.html go here. 
+  Only styles for index.html go here,
+  take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
+*/
+
+/* 
+  
 */
 
 /* section-hero */
@@ -33,6 +38,10 @@
   background-color: var(--clr-button-plus);
 }
 
+/* 
+  This targets the img container so it can centered 
+  within the grids cell
+*/
 .hero-img-box {
   display: flex;
   justify-content: center;
@@ -43,4 +52,25 @@
   width: 100%;
   max-width: 50rem;
   filter: contrast(0.85) saturate(0.95) brightness(1.1);
+}
+
+.done-by {
+  font-size: var(--font-12);
+  line-height: var(--line-height-15);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.done-by--link,
+.done-by--link:link,
+.done-by--link:visited {
+  display: inline-block;
+  font-size: var(--font-14);
+  font-weight: var(--font-weight-500);
+  text-decoration: none;
+  color: var(--clr-paragraph);
+}
+
+.done-by--link:hover,
+.done-by--link:active {
+  border-bottom: 1px solid var(--clr-paragraph);
 }
