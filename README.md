@@ -36,6 +36,6 @@ See our [CONTRIBUTING](CONTRIBUTING.md) page for how to contribute to our projec
 contribution 
 guidelines.
 
-## Code of Conduct
+## 👼 Code of Conduct
 
 Be nice, be patient, be helpful. Everyone here is learning and doing their best. Briefly read the [Open Source Etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette) if this is your first time with Open Source.
