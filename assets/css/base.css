@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Karla:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Inter:wght@400;500&family=Karla:wght@400;500;700&display=swap');
+
 /* 
   Generic styles used across the site go here in base.css, 
   take a look at the STYLE_GUIDE.md to get a better understanding
@@ -9,6 +10,7 @@
   /* typeface */
   --typeface-sans: 'Karla', sans-serif;
   --typeface-monospace: 'Inconsolata', monospace;
+  --typeface-inter: 'Inter', monospace;
 
   /* 
     percentage fonts, is used for making your life easier, 
