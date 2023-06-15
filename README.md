@@ -20,7 +20,7 @@ What you can contribute to this project?
 
 👉 *Anything!*
 
-*Seriously!* You can add a link to another website/project you're working on. Change the background color. Make a list of your favorite foods. Add an interrobang to this `readme` file. Add a link to a cool coding resource. You can also take a look at Issues - see if there is one you want to take on, or one that you'd like to add 
+*Seriously!* You can add a link to another website/project you're working on. Change the background color. Make a list of your favorite foods. Add an interrobang ‽ (an excalmation juxtaposed on a question mark) to this `readme` file. Add a link to a cool coding resource. You can also take a look at Issues - see if there is one you want to take on, or one that you'd like to add 
 
 **Get involved, make mistakes, and break things.**
 
