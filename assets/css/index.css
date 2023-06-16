@@ -95,6 +95,9 @@
     background-size: 400% 100%;
 }
 
+/* 
+  rainbow animation
+*/
 @keyframes rainbow_animation {
   0%,100% {
       background-position: 0 0;
