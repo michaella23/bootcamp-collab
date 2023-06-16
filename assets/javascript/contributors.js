@@ -14,5 +14,10 @@ const contributors = [
         location: "Global Citizen",
         favorite_ice_cream: "Coffee Coffee BuzzBuzzBuzz"
     },
+	{
+        name: "Yikuni",
+        location: "Global Citizen",
+        favorite_ice_cream: "Strawberry"
+    },
 ]
 
