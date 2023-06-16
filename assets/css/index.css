@@ -91,13 +91,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 6s ease-in-out infinite;
+    animation: rainbow_animation 6s ease-in-out 1s infinite;
     background-size: 400% 100%;
 }
 
-/* 
-  rainbow animation
-*/
 @keyframes rainbow_animation {
   0%,100% {
       background-position: 0 0;
