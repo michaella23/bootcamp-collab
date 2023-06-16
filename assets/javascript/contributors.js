@@ -9,4 +9,10 @@ const contributors = [
         location: "Florida, Fl, USA",
         favorite_ice_cream: "Milk chocolate"
     },
+    {
+        name: "Ali",
+        location: "Global Citizen",
+        favorite_ice_cream: "Coffee Coffee BuzzBuzzBuzz"
+    },
 ]
+
