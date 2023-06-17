@@ -1,9 +1,13 @@
-# :computer: Scrimba Bootcamp Collaborative Webpage
+# 🖥️ A Scrimba Bootcamp Exclusive Open Source Project
+
+##### ⚠️ NOTE
+_To take part in this open source project, please consider joining the Scrimba bootcamp [here](https://scrimba.com/bootcamp)_
+
+See it live [here](https://scrimba-bootcamp-rocks.netlify.app 'A link to the live version of the site')
+
+## ❓ What is this?
+
 An opportunity to practice forking, branching, making changes and creating pull requests. 
-
-See it live at: <https://scrimba-bootcamp-rocks.netlify.app/>
-
-## :question: What is this?
 
 👉 Many self-taught developers learn to code by themselves by reading or watching tutorials and coding along with them. Hopefully before long, they start building their own solo projects.
 
