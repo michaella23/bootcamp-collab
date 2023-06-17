@@ -13,6 +13,8 @@ setInterval(() => {
         timeOfDay = "afternoon"
     } else {
         timeOfDay = "night"
+        document.body.style.color = "silver"
+        document.body.style.background = "hsl(324, 71%, 14%)"
     }
 	currentLocalTimeEl.textContent = `Current Local Time: ${currentLocalTime} - Good ${timeOfDay}!`
 }, 1000)
