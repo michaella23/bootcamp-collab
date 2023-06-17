@@ -39,3 +39,6 @@ guidelines.
 ## 👼 Code of Conduct
 
 Be nice, be patient, be helpful. Everyone here is learning and doing their best. Briefly read the [Open Source Etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette) if this is your first time with Open Source.
+
+## 📜 Licensed Under 
+[GNU General Public License v3.0 ( GNU GPLv3 )](./license.txt)
