@@ -8,8 +8,8 @@
 :root {
   /* generic document setup */
   /* typeface */
-  --typeface-sans: 'Karla', sans-serif;
-  --typeface-monospace: 'Inconsolata', monospace;
+  --typeface-karla: 'Karla', sans-serif;
+  --typeface-inconsolata: 'Inconsolata', monospace;
   --typeface-inter: 'Inter', monospace;
 
   /* 
@@ -113,11 +113,13 @@
   --clr-wet-cement: hsl(0, 0%, 20%);
 
   /* Contributors Colors */
+  /* Add your colors here */
   --clr-blueberry-pastel-awcoetzer: hsl(187, 75%, 76%);
   --clr-blueberry-pastel-tint-awcoetzer: hsl(187, 75%, 86%);
+  --clr-maroon-overload-will-s-205: hsl(324, 71%, 14%);
 
   /* color palettes */
-  --clr-shadow: ;
+  --clr-shadow: var(--clr-wet-cement-shade);
   --clr-background: var(--clr-blueberry-pastel-awcoetzer);
   --clr-background-tint: var(--clr-blueberry-pastel-tint-awcoetzer);
   --clr-headline: var(--clr-wet-cement-shade);
@@ -175,7 +177,7 @@ html {
 }
 
 body {
-  font-family: var(--typeface-sans);
+  font-family: var(--typeface-karla);
   font-size: var(--font-18);
   font-weight: var(--font-weight-400);
   line-height: var(--line-height-1);
@@ -220,10 +222,9 @@ body {
   heading to a heading.
 */
 .pre-heading {
-  display: inline-block;
+  display: block;
   padding: 0.15rem 0.45rem;
-  border-radius: 0.8rem;
-  font-family: var(--typeface-monospace);
+  font-family: var(--typeface-inconsolata);
   font-size: var(--font-14);
   font-weight: var(--font-weight-700);
   line-height: var(--line-height-15);
@@ -291,4 +292,59 @@ body {
 
 .center-text {
   text-align: center;
+}
+
+.display-block {
+  display: block;
+}
+
+/* media queries */
+/* 1151px / 16 = 72em */
+@media only screen and (max-width: 72em) {
+  html {
+    font-size: var(--percentage-font-9);
+  }
+}
+
+/* 944px / 16 = 59em */
+@media only screen and (max-width: 59em) {
+  html {
+    font-size: var(--percentage-font-8);
+  }
+
+  .grid {
+    column-gap: var(--spacing-24);
+  }
+}
+
+/* 767px / 16 = 44em */
+@media only screen and (max-width: 44em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-padding {
+    padding: var(--spacing-64) 0;
+  }
+
+  .hero-img-box {
+    order: -1;
+  }
+}
+
+/* 455px / 16 = 44em */
+@media only screen and (max-width: 29em) {
+  .container {
+    padding: 0 var(--spacing-24);
+  }
+
+  .link--hero {
+    display: block;
+    width: 100%;
+  }
+
+  .link--hero:first-of-type {
+    margin-bottom: var(--spacing-12);
+  }
+  
 }

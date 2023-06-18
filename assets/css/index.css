@@ -4,10 +4,6 @@
   take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
 */
 
-/* 
-  
-*/
-
 /* section-hero */
 .section-hero {
   background-color: var(--clr);
@@ -16,6 +12,40 @@
 .hero {}
 
 .hero-text-box {}
+
+.current-local-time {
+  text-align: right;
+  font-size: var(--font-24);
+  background: linear-gradient(
+    to right,
+    #3c3cbd,
+    #0059ff,
+    #8f6901,
+    #ff3399,
+    #3f3fd1
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 10s 1s infinite;
+  background-size: 400% 100%;
+  margin-bottom: var(--spacing-4);
+  z-index: 1;
+}
+
+/* 
+  moving rainbow gradient effect on the Current Local time text
+*/
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
 
 .hero-text {
   margin-bottom: var(--spacing-12);
@@ -26,6 +56,7 @@
 }
 
 .link--hero {
+  text-align: center;
   padding: var(--spacing-16) var(--spacing-24);
   border: 2px solid var(--clr-stroke);
   border-radius: 0.8rem;
@@ -60,6 +91,7 @@
   transition: all 0.8s ease-in-out;
 }
 
+/* section footer */
 .done-by {
   font-size: var(--font-12);
   line-height: var(--line-height-15);
@@ -79,28 +111,4 @@
 .done-by--link:hover,
 .done-by--link:active {
   border-bottom: 1px solid var(--clr-paragraph);
-}
-
-
-/* 
-  moving rainbow gradient effect on the Current Local time text
-*/
-
-#current-local-time{
-  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 6s ease-in-out 1s infinite;
-    background-size: 400% 100%;
-}
-
-@keyframes rainbow_animation {
-  0%,100% {
-      background-position: 0 0;
-  }
-
-  50% {
-      background-position: 100% 0;
-  }
 }

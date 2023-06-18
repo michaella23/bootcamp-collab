@@ -1,22 +1,39 @@
 'use strict';
 
 const currentLocalTimeEl = document.getElementById('current-local-time')
+const greetingEl = document.querySelector('#greeting');
+console.log(greetingEl);
 
 setInterval(() => {
-	const currentLocalTime = new Date().toLocaleTimeString()
-	const date = new Date()
-    const hours = date.getHours()
-	let timeOfDay
-	if (hours < 12) {
-        timeOfDay = "morning"
-    } else if (hours >= 12 && hours < 17) {
-        timeOfDay = "afternoon"
-    } else {
-        timeOfDay = "night"
-        document.body.style.color = "silver"
-        document.body.style.background = "hsl(324, 71%, 14%)"
-    }
-	currentLocalTimeEl.textContent = `Current Local Time: ${currentLocalTime} - Good ${timeOfDay}!`
-}, 1000)
+    const currentLocalTime = new Date().toLocaleTimeString();
+    // the user is saving the date object to a variable
+	const date = new Date();
+    // then pulling the hours from the date object
+    const hours = date.getHours();
+    
+    /* 
+        user is declaring an undefined variable outside
+        the scope of the control structure / if statement 
+        below and then setting the value depending on
+        the hours.
+    */
+	let timeOfDay;
+    let timeOfDayEmote;
 
+	if (hours < 12) {
+        timeOfDay = "morning";
+        timeOfDayEmote = '🌄';
+    } else if (hours >= 12 && hours < 17) {
+        timeOfDay = "afternoon";
+        timeOfDayEmote = '🌅';
+    } else {
+        timeOfDay = "night";
+        timeOfDayEmote = '🌆';
+        document.body.style.color = "silver";
+        document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
+    }
+
+    currentLocalTimeEl.textContent = `Local Time: ${currentLocalTime}`;
+    greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
+}, 1000)
 
