@@ -37,3 +37,23 @@ setInterval(() => {
     greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
 }, 1000)
 
+function setTheme() {
+    const hours = new Date().getHours();
+    if (hours < 17 && document.getElementById("theme-button").textContent == "THEME") {
+        document.body.style.color = "silver";
+        document.body.style.background = "var(--clr-maroon-overload-will-s-205)"; //DARK
+        document.getElementById("theme-button").textContent = "DARK"; //DARK
+    } else if (hours > 17 && document.getElementById("theme-button").textContent == "THEME") {
+        document.body.style.color = "var(--clr-paragraph)";
+        document.body.style.background = "var(--clr-background-tint)"; // LIGHT
+        document.getElementById("theme-button").textContent = "LIGHT"; // LIGHT
+    } else if (document.getElementById("theme-button").textContent == "LIGHT") {
+        document.body.style.color = "silver";
+        document.body.style.background = "var(--clr-maroon-overload-will-s-205)"; //DARK
+        document.getElementById("theme-button").textContent = "DARK"; //DARK
+    } else if (document.getElementById("theme-button").textContent == "DARK") {
+        document.body.style.color = "var(--clr-paragraph)";
+        document.body.style.background = "var(--clr-background-tint)"; // LIGHT
+        document.getElementById("theme-button").textContent = "LIGHT"; // LIGHT
+    }
+}
