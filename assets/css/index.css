@@ -26,6 +26,7 @@
 }
 
 .link--hero {
+  text-align: center;
   padding: var(--spacing-16) var(--spacing-24);
   border: 2px solid var(--clr-stroke);
   border-radius: 0.8rem;
