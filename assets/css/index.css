@@ -129,13 +129,11 @@
 }
 
 #theme-button {
-  /* display: flex; */
   float: right;
   padding: 3rem;
   margin: 3rem;
   
   background-color: var(--clr-button-plus);
-  /* border: none; */
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid var(--clr-paragraph);
@@ -143,8 +141,13 @@
   color: var(--clr-paragraph);
   font-size: 1rem;
   font-weight: bolder;
+
+  /* outline: none; */
+  transition: 0.5s ease-in-out;
 }
 
 #theme-button:hover {
-
+  transform: translateY(3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #daaa44;
 }
