@@ -16,14 +16,12 @@
 .current-local-time {
   text-align: right;
   font-size: var(--font-24);
-  background: linear-gradient(
-    to right,
-    #3c3cbd,
-    #0059ff,
-    #8f6901,
-    #ff3399,
-    #3f3fd1
-    );
+  background: linear-gradient(to right,
+      #3c3cbd,
+      #0059ff,
+      #8f6901,
+      #ff3399,
+      #3f3fd1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -37,6 +35,7 @@
   moving rainbow gradient effect on the Current Local time text
 */
 @keyframes rainbow_animation {
+
   0%,
   100% {
     background-position: 0 0;
@@ -119,9 +118,34 @@
 */
 
 .hover-effect:hover {
-  background: #8A2387;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity:1;
-  box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+  background: #8A2387;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+#theme-button {
+  float: right;
+  padding: 3rem;
+  margin: 3rem;
+  
+  background-color: var(--clr-button-plus);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--clr-paragraph);
+
+  color: var(--clr-paragraph);
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: 0.5s ease-in-out;
+}
+
+#theme-button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #daaa44;
 }
