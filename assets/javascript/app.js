@@ -53,7 +53,7 @@ themeBtnEl.addEventListener('click', function () {
         lightTheme()
     } else if (toggleIs == "LIGHT") {
         darkTheme()
-    } else if (toggleIs == "DARK") {
+    } else {
         lightTheme()
     }
 })
