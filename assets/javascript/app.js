@@ -26,6 +26,18 @@ const themeForDaytime = () => {
 }
 themeForDaytime();
 
+const darkTheme = () => {
+    document.body.style.color = "silver";
+    document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
+    document.getElementById("theme-button").textContent = "DARK";
+}
+
+const lightTheme = () => {
+    document.body.style.color = "var(--clr-paragraph)";
+    document.body.style.background = "var(--clr-background-tint)";
+    document.getElementById("theme-button").textContent = "LIGHT";
+}
+
 function setTheme() {
     // the user is saving the date object to a variable
     const date = new Date();
@@ -34,21 +46,13 @@ function setTheme() {
 
     // toggle theme of the webpage
     if (hours < 17 && document.getElementById("theme-button").textContent == "THEME") {
-        document.body.style.color = "silver";
-        document.body.style.background = "var(--clr-maroon-overload-will-s-205)"; //DARK
-        document.getElementById("theme-button").textContent = "DARK"; //DARK
+        darkTheme()
     } else if (hours > 17 && document.getElementById("theme-button").textContent == "THEME") {
-        document.body.style.color = "var(--clr-paragraph)";
-        document.body.style.background = "var(--clr-background-tint)"; // LIGHT
-        document.getElementById("theme-button").textContent = "LIGHT"; // LIGHT
+        lightTheme()
     } else if (document.getElementById("theme-button").textContent == "LIGHT") {
-        document.body.style.color = "silver";
-        document.body.style.background = "var(--clr-maroon-overload-will-s-205)"; //DARK
-        document.getElementById("theme-button").textContent = "DARK"; //DARK
+        darkTheme()
     } else if (document.getElementById("theme-button").textContent == "DARK") {
-        document.body.style.color = "var(--clr-paragraph)";
-        document.body.style.background = "var(--clr-background-tint)"; // LIGHT
-        document.getElementById("theme-button").textContent = "LIGHT"; // LIGHT
+        lightTheme()
     }
 
 }
