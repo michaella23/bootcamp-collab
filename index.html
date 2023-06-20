@@ -8,6 +8,8 @@
     <title>Bootcamp Collab</title>
     <link rel="icecream icon" href="./assets/images/hero/hero-min.png">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -21,20 +23,23 @@
                 <div class="hero grid grid--2-cols grid--center-v">
                     <div class="hero-text-box">
                         <span id="current-local-time" class="pre-heading display-block current-local-time"></span>
-                        <span id="greeting" class="pre-heading">
+                        <span id="greeting" class="pre-heading display-block">
                             Hello👋, bootcamp students!
                         </span>
                         <h1 class="heading-primary">
                             Scrimbas Exclusive Open Source Project
                         </h1>
                         <p class="hero-text">
-                            Welcome bootcamp students to experience an opportunity to practice forking, branching, making changes and making pull requests to an open source project.
+                            Welcome bootcamp students to experience an opportunity to practice forking, branching,
+                            making changes and making pull requests to an open source project.
                         </p>
                         <p class="hero-text">
                             If you interested in joining this collaboration, join the bootcamp with the button below.
                         </p>
-                        <a href="https://github.com/michaella23/bootcamp-collab" target="_blank" class="link link--hero margin-right-sm ">Project Repo</a>
-                        <a href="https://scrimba.com/bootcamp" target="_blank" class="link link--hero scrimba">Join the Bootcamp</a>
+                        <a href="https://github.com/michaella23/bootcamp-collab" target="_blank"
+                            class="link link--hero margin-right-sm ">Project Repo</a>
+                        <a href="https://scrimba.com/bootcamp" target="_blank" class="link link--hero scrimba">Join the
+                            Bootcamp</a>
                     </div>
 
                     <picture class="hero-img-box">
@@ -46,9 +51,25 @@
                 </div>
             </div>
         </section>
-        <section>
+
+        <section class="section-padding section-scrimba-contributors">
+            <!-- section header -->
             <div class="container">
-                <h2 class="heading-secondary">Useful Information</h2>
+                <span class="pre-heading">Scrimba = ❤️</span>
+                <h2 class="heading-secondary">
+                    Meet our amazing contributors
+                </h2>
+            </div>
+
+            <!-- section component -->
+            <div class="scrimba-contributors">
+                <div class="container grid grid--2-cols scrimba-contributors--container">
+                    <button class="load-more">
+                        <ion-icon name="arrow-down-outline" class="load-more--icon"></ion-icon>
+                    </button>
+                    
+                </div>
+                
             </div>
         </section>
     </main>
@@ -72,7 +93,9 @@
         </div>
     </footer>
 
-    <script src="assets/javascript/app.js"></script>
+    <script src="./assets/javascript/app.js" type="Module"></script>
+    <script src="./assets/javascript/contributors.js" type="Module"></script>
+    <script src="./assets/javascript/contributors-component.js" type="Module"></script>
 </body>
 
 </html>
