@@ -186,7 +186,6 @@ const renderScrimbaContributors = function () {
     createScrimbaContributorsElements(i);
   }
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-  console.log(loadCount);
 }
 
 /* 
