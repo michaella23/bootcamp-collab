@@ -52,7 +52,7 @@ const contributors = [
         location: "Union City, CA, USA",
         favorite_ice_cream: 'chocolate',
         githubLink: 'https://github.com/will-s-205',
-        profileImage: 'how do I get it?',
+        profileImage: 'https://avatars.githubusercontent.com/u/97144951?v=4',
         likes: 'Everything that involves building new things'
     }
 ]
