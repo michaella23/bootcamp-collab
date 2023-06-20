@@ -54,13 +54,15 @@
   --font-24: 2.4rem;
   --font-30: 3rem;
   --font-32: 3.2rem;
-  --font-36: 3.6rem; /* end of normal font size */
+  --font-36: 3.6rem;
+  /* end of normal font size */
   --font-44: 4.4rem;
   --font-52: 5.2rem;
   --font-62: 6.2rem;
   --font-74: 7.4rem;
   --font-86: 8.6rem;
-  --font-98: 9.8rem; /* end of heading font size */
+  --font-98: 9.8rem;
+  /* end of heading font size */
 
   /* font weight */
   --font-weight-400: 400;
@@ -111,6 +113,7 @@
   --clr-lemon-pastel-tint: hsl(53, 100%, 81%);
   --clr-wet-cement-shade: hsl(0, 0%, 8%);
   --clr-wet-cement: hsl(0, 0%, 20%);
+  --clr-terracotta: hsl(25, 75%, 84.3%);
 
   /* Contributors Colors */
   /* Add your colors here */
@@ -126,15 +129,8 @@
   --clr-paragraph: var(--clr-wet-cement);
   --clr-button: var(--clr-blinding-light);
   --clr-button-text: var(--clr-shadow);
-  --clr-button-before: linear-gradient(140deg,
-      var(--clr-blinding-light-shade),
-      var(--clr-blinding-light-shade-plus)
-      );
   --clr-button-plus: var(--clr-accent-tint);
   --clr-button-plus-text: var(--clr-shadow);
-  --clr-button-plus-before: linear-gradient(140deg,
-      var(--clr-accent-tint),
-      var(--clr-accent));
   --clr-button-shadow: var(--clr-shadow);
   --clr-stroke: var(--clr-blinding-light);
   --clr-highlight: var(--clr-accent-tint);
@@ -222,7 +218,7 @@ body {
   heading to a heading.
 */
 .pre-heading {
-  display: block;
+  display: inline-block;
   padding: 0.15rem 0.45rem;
   font-family: var(--typeface-inconsolata);
   font-size: var(--font-14);
@@ -298,6 +294,10 @@ body {
   display: block;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 /* media queries */
 /* 1151px / 16 = 72em */
 @media only screen and (max-width: 72em) {
@@ -315,6 +315,10 @@ body {
   .grid {
     column-gap: var(--spacing-24);
   }
+
+  .scrimba-contributors--container {
+    column-gap: var(--spacing-32) !important;
+  }
 }
 
 /* 767px / 16 = 44em */
@@ -329,6 +333,10 @@ body {
 
   .hero-img-box {
     order: -1;
+  }
+
+  .scrimba-contributors--container {
+    row-gap: var(--spacing-48) !important;
   }
 }
 
@@ -346,5 +354,10 @@ body {
   .link--hero:first-of-type {
     margin-bottom: var(--spacing-12);
   }
-  
+
+  .scrimba-contributors--container {
+    padding: 0 var(--spacing-32) !important;
+    row-gap: var(--spacing-24) !important;
+  }
+
 }
