@@ -12,19 +12,28 @@ setInterval(() => {
 }, 1000)
 
 
-const themeForDaytime = () => {
-    // the user is saving the date object to a variable
+setInterval(() => {
+    const currentLocalTime = new Date().toLocaleTimeString();
     const date = new Date();
-    // then pulling the hours from the date object
     const hours = date.getHours();
 
-    // switch to night theme after 5pm
-    if (hours > 17) {
-        document.body.style.color = "silver";
-        document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
+    let timeOfDay;
+    let timeOfDayEmote;
+
+    if (hours < 12) {
+        timeOfDay = "morning"
+        timeOfDayEmote = '🌄';
+    } else if (hours >= 12 && hours < 17) {
+        timeOfDay = "afternoon"
+        timeOfDayEmote = '🌅';
+    } else {
+        timeOfDay = "night"
+        timeOfDayEmote = '🌆';
     }
-}
-themeForDaytime();
+    // show current time
+    currentLocalTimeEl.textContent = `Local Time: ${currentLocalTime}`;
+    greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
+}, 1000)
 
 const darkTheme = () => {
     document.body.style.color = "silver";
