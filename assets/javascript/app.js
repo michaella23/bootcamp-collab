@@ -48,12 +48,12 @@ themeBtnEl.addEventListener('click', function () {
 
     // toggle theme of the webpage
     if (hours < 17 && toggleIs == "THEME") {
-        darkTheme()
+        lightTheme()
     } else if (hours > 17 && toggleIs == "THEME") {
-        lightTheme()
-    } else if (toggleIs == "LIGHT") {
         darkTheme()
-    } else {
+    } else if (toggleIs == "DARK") {
         lightTheme()
+    } else {
+        darkTheme()
     }
 })
