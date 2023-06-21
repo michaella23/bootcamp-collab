@@ -19,7 +19,7 @@ Here are a couple of **videos** created by our awesome project maintainer **Mich
 ## General Guidelines:
 1. Look through pre-existing [Issues](https://github.com/michaella23/bootcamp-collab/issues) and see if there is one 
    you would like to take on. If there isn't an issue for a change you would like to make, please create a **New Issue**.
-    <img src="assets/images/readme/new_issue.png" alt="Screen grab of GitHub issues page. There is an orange circle around the 'New Issue' button on the right side" width="500" height="600">.
+    <img src="assets/images/readme/new_issue.png" alt="Screen grab of GitHub issues page. There is an orange circle around the 'New Issue' button on the right side" width="800" height="600">.
 2. Ask to be assigned to an issue, and tag the maintainer(s). Pull requests without a corresponding issue may or may not 
    be accepted.
 3. Please work on one issue at a time in order to avoid miscommunication. If you find there is something else you would
