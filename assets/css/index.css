@@ -4,6 +4,35 @@
   take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
 */
 
+/* header elements */
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.theme-button {
+  float: right;
+  padding: 3rem;
+  margin: 3rem;
+  
+  background-color: var(--clr-button-plus);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--clr-paragraph);
+
+  color: var(--clr-paragraph);
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: 0.5s ease-in-out;
+}
+
+.theme-button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #daaa44;
+}
+
 /* section-hero */
 .section-hero {}
 
