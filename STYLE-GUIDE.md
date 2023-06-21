@@ -144,5 +144,3 @@ See a mistake? A typo? or just want to contribute to this document? Feel free to
 ## Who has contributed to this document
 
 Here you can see who has contributed to this particular document. If you have made a contribution to this document, please feel free to add your GitHub Profile below so others can connect with you.
-
-- [Andre W. Coetzer](https://github.com/awcoetzer)
