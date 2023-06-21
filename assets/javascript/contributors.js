@@ -30,12 +30,12 @@ const contributors = [
     },
     {
         name: "Ali",
-        githubName: '',
+        githubName: 'aliasimkazmi',
         location: "Global Citizen",
         favorite_ice_cream: "Coffee Coffee BuzzBuzzBuzz",
-        github: '',
-        profileImage: '',
-        likes: ''
+        github: 'https://github.com/aliasimkazmi',
+        profileImage: 'https://avatars.githubusercontent.com/u/4642709?v=4',
+        likes: 'Chocolate chip chookies with Tea(Chai)'
     },
     {
         name: "Micha",
