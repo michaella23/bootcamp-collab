@@ -39,6 +39,18 @@ const lightTheme = () => {
     themeBtnEl.textContent = "LIGHT";
 }
 
+const timeOfDay = () => {
+    const date = new Date();
+    const hours = date.getHours();
+
+    if (hours > 17) {
+        darkTheme()
+    } else {
+        lightTheme()
+    }
+}
+timeOfDay();
+
 themeBtnEl.addEventListener('click', function () {
     const toggleIs = themeBtnEl.textContent;
     // the user is saving the date object to a variable
@@ -47,11 +59,7 @@ themeBtnEl.addEventListener('click', function () {
     const hours = date.getHours();
 
     // toggle theme of the webpage
-    if (hours < 17 && toggleIs == "THEME") {
-        lightTheme()
-    } else if (hours > 17 && toggleIs == "THEME") {
-        darkTheme()
-    } else if (toggleIs == "DARK") {
+     if (toggleIs == "DARK") {
         lightTheme()
     } else {
         darkTheme()
