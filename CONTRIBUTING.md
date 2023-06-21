@@ -24,7 +24,9 @@ Here are a couple of **videos** created by our awesome project maintainer **Mich
    be accepted.
 3. Please work on one issue at a time in order to avoid miscommunication. If you find there is something else you would
    like to change while working on your issue, please follow the previous two steps to create an Issue and - if you would like to work on it - ask to be assigned.
-4. If you work on an issue in the project's **Issues** list, and it gets implemented/fixed/resolved by a PR, and the 
+4. If you see code that was written by another contributor that you feel could be improved, you might wish to tag them 
+   in the issue that you create so that you can discuss potential changes and decide who will work on this issue. One or both of you may then request assignment to the issue.
+5. If you work on an issue in the project's **Issues** list, and it gets implemented/fixed/resolved by a PR, and the 
    PR is accepted and closed by a project **maintainer** and merged to `main`, you, the issue creator, 
    can close the issue yourself.
 ### First time contributing? Do this:
