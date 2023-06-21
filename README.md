@@ -24,7 +24,7 @@ What you can contribute to this project?
 
 👉 *Anything!*
 
-*Seriously!* You can add a link to another website/project you're working on. Change the background color. Make a list of your favorite foods. Add an interrobang ‽ (an excalmation juxtaposed on a question mark) to this `readme` file. Add a link to a cool coding resource. You can also take a look at Issues - see if there is one you want to take on, or one that you'd like to add 
+*Seriously!* You can add a link to another website/project you're working on. Change the background color. Make a list of your favorite foods. Add an interrobang (an exclamation juxtaposed on a question mark - '?!') to this `readme` file. Add a link to a cool coding resource. You can also take a look at Issues - see if there is one you want to take on, or one that you'd like to add 
 
 **Get involved, make mistakes, and break things.**
 
@@ -36,13 +36,11 @@ There can be a lot to learn when getting involved in open-source projects if you
 
 Do you already know about these things? Here is a [great article](https://www.freecodecamp.org/news/a-practical-guide-to-start-opensource-contributions/) to get you started with forking a repository and creating a pull request. If you are comfortable reading documentation, Github is pretty accessible and they have a good section on [working collaboratively](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models) that is worth a read.
 
-See our [CONTRIBUTING](CONTRIBUTING.md) page for how to contribute to our project and the 
-contribution 
-guidelines.
+See our [CONTRIBUTING](CONTRIBUTING.md) page for how to contribute to our project and the contribution guidelines.
 
 ## 👼 Code of Conduct
 
-Be nice, be patient, be helpful. Everyone here is learning and doing their best. Briefly read the [Open Source Etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette) if this is your first time with Open Source.
+Be nice, be patient, be helpful. Everyone here is learning and doing their best. If something gets broken, we can help each other learn by fixing it. Please communicate in a respectful manner. Remember that our contributors and maintainers live in various time zones and may have other obligations besides this project. If you have submitted a pull request, or have added comments to someone else's, please be patient as you wait for them to get back to you. Briefly read the [Open Source Etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette) if this is your first time with Open Source, or if you need a refresher!
 
 ## 📜 Licensed Under 
 [GNU General Public License v3.0 ( GNU GPLv3 )](./license.txt)
