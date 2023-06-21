@@ -6,6 +6,8 @@ project maintainer and Scrimba Bootcamp Mentor **Micha** to enable you, Scrimba 
 workflow of contributing to 
 **Open Source Projects**. This way you build experience which will help you build confidence which will empower you 
 to go out there and contribute to real world **Open Source Projects**.
+## Languages Used
+This is the first collaborative project we have done in the [Scrimba Bootcamp](https://scrimba.com/bootcamp). We are using HTML, CSS, Vanilla JavaScript and Markdown. Our hope is that anyone - whether they have just started learning to code, or have been doing it for a while, can feel confident to contribute.
 ## How to Contribute
 Here are a couple of **videos** created by our awesome project maintainer **Micha** that show you how to contribute:
 1. How to contribute to the project: <https://www.loom.com/share/1641443280924a049ab4a1d38f548680>
@@ -14,6 +16,13 @@ Here are a couple of **videos** created by our awesome project maintainer **Mich
 
 **For the written detailed version of the steps, see below.**
 
+## General Guidelines:
+1. Look through pre-existing [Issues](https://github.com/michaella23/bootcamp-collab/issues) and see if there is one 
+   you would like to take on. If there isn't an issue for a change you would like to make, please create a **New Issue**.
+    <img src="assets/images/readme/new_issue.png" alt="Screen grab of GitHub issues page. There is an orange circle around the 'New Issue' button on the right side">.
+2. If you create an issue in the project's **Issues** list, and it gets implemented/fixed/resolved by a PR, and the 
+   PR is accepted and closed by a project **maintainer** and merged to `main`, you, the issue creator, 
+   can close the issue yourself. 
 ### First time contributing? Do this:
 1. Browse to the project GitHub repository URL: <https://github.com/michaella23/bootcamp-collab>
 2. Fork it to your GitHub account.
@@ -85,10 +94,6 @@ git push origin main
 </pre>
 3. Continue from **item #8** from the list above.
 
-## General Guidelines:
-1. If you create an issue in the project's **Issues** list, and it gets implemented/fixed/resolved by a PR, and the 
-   PR is accepted and closed by a project **maintainer** and merged to `main`, you, the issue creator, 
-   can close the issue yourself. 
 
 
 
