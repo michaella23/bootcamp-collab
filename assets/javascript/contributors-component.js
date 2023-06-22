@@ -183,7 +183,7 @@ const renderScrimbaContributors = function () {
     scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
   }
   for (let i = 0; i < loadAmount; i++) {
-    createScrimbaContributorsElements(i);
+    createScrimbaContributorsElements(Math.floor(Math.random() * contributors.length));
   }
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
