@@ -36,6 +36,28 @@ Examples of unacceptable behavior include:
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
+## Manage conflict recommendations
+
+As a community member, you can play an important role in contributing to conflict resolution within your community. Here are some strategies you can employ:
+
+1. Stay calm and objective: When confronted with a conflict, it's crucial to remain calm and composed. Avoid responding with anger or defensiveness, as it can escalate the situation further. Maintain an objective mindset and focus on resolving the conflict constructively.
+
+2. Communicate openly: Engage in open and honest communication with the person or people involved in the conflict. Express your concerns or perspectives calmly and respectfully, and listen actively to understand their point of view. Encourage a two-way dialogue to foster understanding and find common ground.
+
+3. Seek understanding: Take the time to understand the underlying causes and motivations behind the conflict. Put yourself in the other person's shoes and try to see the situation from their perspective. This empathy can help create a more empathetic and cooperative atmosphere.
+
+4. Find common ground: Look for areas of agreement or shared interests between you and the other party. By focusing on common ground, you can establish a foundation for resolving the conflict collaboratively. Building on shared objectives can lead to mutually beneficial solutions.
+
+5. Propose solutions: Offer potential solutions or alternatives to address the conflict. Be proactive in generating ideas that could help resolve the issue at hand. Present your suggestions in a constructive and non-confrontational manner, emphasizing the positive outcomes they can achieve.
+
+6. Seek assistance if needed: If you're unable to resolve the conflict on your own, don't hesitate to seek assistance. Talk to your community lead or a designated person responsible for conflict resolution in your community. They can provide guidance, mediate the discussion, or offer support in finding a resolution.
+
+7. Maintain professionalism: Throughout the conflict resolution process, it's crucial to maintain a professional demeanor. Avoid engaging in personal attacks, gossip, or negative behavior. Focus on finding a solution that benefits everyone involved and contributes to a positive work environment.
+
+8. Learn from the experience: Reflect on the conflict and your role in its resolution. Consider what you could have done differently and how you can apply these lessons in the future. Conflict situations can provide valuable opportunities for personal growth and development.
+
+Remember that conflict is a natural part of human interaction, and how it is managed can significantly impact the work environment. By approaching conflicts with a constructive mindset, effective communication, and a willingness to find solutions, you can contribute to a positive and harmonious workplace.
+
 ## Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of
@@ -126,25 +148,3 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
-
-## Manage conflict recommendations
-
-As a community member, you can play an important role in contributing to conflict resolution within your community. Here are some strategies you can employ:
-
-1. Stay calm and objective: When confronted with a conflict, it's crucial to remain calm and composed. Avoid responding with anger or defensiveness, as it can escalate the situation further. Maintain an objective mindset and focus on resolving the conflict constructively.
-
-2. Communicate openly: Engage in open and honest communication with the person or people involved in the conflict. Express your concerns or perspectives calmly and respectfully, and listen actively to understand their point of view. Encourage a two-way dialogue to foster understanding and find common ground.
-
-3. Seek understanding: Take the time to understand the underlying causes and motivations behind the conflict. Put yourself in the other person's shoes and try to see the situation from their perspective. This empathy can help create a more empathetic and cooperative atmosphere.
-
-4. Find common ground: Look for areas of agreement or shared interests between you and the other party. By focusing on common ground, you can establish a foundation for resolving the conflict collaboratively. Building on shared objectives can lead to mutually beneficial solutions.
-
-5. Propose solutions: Offer potential solutions or alternatives to address the conflict. Be proactive in generating ideas that could help resolve the issue at hand. Present your suggestions in a constructive and non-confrontational manner, emphasizing the positive outcomes they can achieve.
-
-6. Seek assistance if needed: If you're unable to resolve the conflict on your own, don't hesitate to seek assistance. Talk to your community lead or a designated person responsible for conflict resolution in your community. They can provide guidance, mediate the discussion, or offer support in finding a resolution.
-
-7. Maintain professionalism: Throughout the conflict resolution process, it's crucial to maintain a professional demeanor. Avoid engaging in personal attacks, gossip, or negative behavior. Focus on finding a solution that benefits everyone involved and contributes to a positive work environment.
-
-8. Learn from the experience: Reflect on the conflict and your role in its resolution. Consider what you could have done differently and how you can apply these lessons in the future. Conflict situations can provide valuable opportunities for personal growth and development.
-
-Remember that conflict is a natural part of human interaction, and how it is managed can significantly impact the work environment. By approaching conflicts with a constructive mindset, effective communication, and a willingness to find solutions, you can contribute to a positive and harmonious workplace.
