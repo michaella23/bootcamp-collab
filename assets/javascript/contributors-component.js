@@ -5,7 +5,7 @@ import { contributors } from "./contributors.js";
 const scrimbaContributorsContainerEl = document.querySelector('.scrimba-contributors--container');
 const scrimbaContributorsLoadMoreBtnEl = document.querySelector('.load-more');
 
-let loadAmount, loadCount;
+let loadAmount, loadCount, currentContributors;
 
 /*
     The function below generates a random number for
@@ -15,6 +15,10 @@ const randomDefaultProfilePic = function () {
   const randomNumber = Math.floor(Math.random() * 10);
 
   return `./assets/images/scrimba-likes-default/default-${randomNumber}.jpg`
+}
+
+const randomContributor = function () {
+  return Math.floor(Math.random() * contributors.length);
 }
 
 /*
@@ -108,11 +112,12 @@ const createUserCommentEl = function (index) {
 
 const createMoreContributorsElements = function () {
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-  for (let i = loadCount; i < loadAmount + loadCount; i++) {
-    if (i < contributors.length) {
-      createScrimbaContributorsElements(i);
-    }
-  }
+  randomRender()
+  // for (let i = loadCount; i < loadAmount + loadCount; i++) {
+  //   if (i < contributors.length) {
+  //     createScrimbaContributorsElements(i);
+  //   }
+  // }
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
 
@@ -178,13 +183,38 @@ const createScrimbaContributorsElements = function (index) {
   appendScrimbaContributorsContainerEl(scrimbaContributorsCardEl)
 }
 
+const randomRender = function () {
+  let randomPick = randomContributor();
+  let buffer = 0;
+
+  for (let i = 0; buffer !== loadAmount; i++) {
+    if (contributors[randomPick].load_check) {
+      randomPick = randomContributor();
+    } else {
+      createScrimbaContributorsElements(randomPick);
+      contributors[randomPick].load_check = true
+      buffer++
+    }
+  }
+}
+
 const renderScrimbaContributors = function () {
   if (contributors.length <= loadAmount) {
     scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
   }
-  for (let i = 0; i < loadAmount; i++) {
-    createScrimbaContributorsElements(i);
-  }
+  randomRender()
+  // let randomPick = randomContributor();
+  // let buffer = 0;
+  
+  // for (let i = 0; buffer !== loadAmount; i++) {
+  //   if (contributors[randomPick].load_check) {
+  //     randomPick = randomContributor();
+  //   } else {
+  //     createScrimbaContributorsElements(randomPick);
+  //     contributors[randomPick].load_check = true
+  //     buffer++
+  //   }
+  // }
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
 
@@ -200,7 +230,8 @@ scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
 })
 
 const init = function () {
-  loadAmount = 4;
+  loadAmount = 6;
+  currentContributors = [];
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
   renderScrimbaContributors();
 }
