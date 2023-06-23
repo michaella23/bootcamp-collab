@@ -7,8 +7,9 @@
 /* header elements */
 .header{
   display: flex;
-  align-items: center;
-  justify-content: right;
+  position: fixed;
+  right: 0;
+  z-index: 1;
 }
 
 .theme-button {
