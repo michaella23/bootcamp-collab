@@ -1,5 +1,7 @@
 'use strict';
 
+const themeLnkEl = document.querySelector('.link-color');
+const themeLnkEl2 = document.querySelector('.done-by--link');
 const themeBtnEl = document.querySelector('.theme-button');
 const currentLocalTimeEl = document.getElementById('current-local-time');
 const greetingEl = document.querySelector('#greeting');
@@ -31,12 +33,16 @@ const darkTheme = () => {
     document.body.style.color = "silver";
     document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
     themeBtnEl.textContent = "DARK";
+    themeLnkEl.style.color="var(--clr-terracotta)";
+    themeLnkEl2.style.color="var(--clr-terracotta)";
 }
 
 const lightTheme = () => {
     document.body.style.color = "var(--clr-paragraph)";
     document.body.style.background = "var(--clr-background-tint)";
     themeBtnEl.textContent = "LIGHT";
+    themeLnkEl.style.color="var(--clr-paragraph)";
+    themeLnkEl2.style.color="var(--clr-paragraph)";
 }
 
 const timeOfDay = () => {
