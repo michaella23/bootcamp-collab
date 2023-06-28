@@ -130,6 +130,16 @@ const contributors = [
         likes: 'Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.',
         load_check: false
     },
+    {
+        name: "THUNDERBOLT",
+        githubName: 'shantdashjian',
+        location: "Armenia",
+        favorite_ice_cream: "Chocolate, chocolate, and chocolate!",
+        githubLink: 'https://github.com/shantdashjian',
+        profileImage: 'https://avatars.githubusercontent.com/u/2113918?s=400&u=8af40a88b2b95b93e57fbfb6191989560877ab6a&v=4',
+        likes: 'Learning, teaching, and growing!',
+        load_check: false
+    },
 ]
 
 export { contributors }
