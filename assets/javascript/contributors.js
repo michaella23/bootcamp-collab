@@ -130,6 +130,16 @@ const contributors = [
         likes: 'Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.',
         load_check: false
     },
+    {
+        name: "Tak",
+        githubName: 'tak40',
+        location: "Boston, MA, USA",
+        favorite_ice_cream: "",
+        githubLink: 'https://github.com/tak40',
+        profileImage: '',
+        likes: 'Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.',
+        load_check: false
+    }
 ]
 
 export { contributors }
