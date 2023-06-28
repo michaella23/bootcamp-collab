@@ -110,12 +110,12 @@
   width: 100%;
   max-width: 50rem;
   filter: contrast(0.85) saturate(0.95) brightness(1.1);
+  transition: all 0.8s ease-in-out;
 }
 
 .hero-img:hover {
   cursor: pointer;
   transform: scale(1.6);
-  transition: all 0.8s ease-in-out;
 }
 
 /* section scrimba-likes */
