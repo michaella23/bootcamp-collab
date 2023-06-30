@@ -140,6 +140,16 @@ const contributors = [
         likes: 'Learning, teaching, and growing!',
         load_check: false
     },
+    {
+        name: "Tak",
+        githubName: 'tak40',
+        location: "Boston, MA, USA",
+        favorite_ice_cream: "Vanilla, Vanilla, and VANILLA! Did I mention Vanilla?",
+        githubLink: 'https://github.com/tak40',
+        profileImage: '',
+        likes: 'At Scrimba Bootcamp, learning to code is like making ice cream - it starts cold and hard, but with the warmth of the community, it melts into something delightfully smooth... lol',
+        load_check: false
+    }
 ]
 
 export { contributors }
