@@ -130,24 +130,24 @@ const contributors = [
         likes: 'Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.',
         load_check: false
     },
-    
-
-
-
-
-
-
-
-
-
+    {
+        name: "THUNDERBOLT",
+        githubName: 'shantdashjian',
+        location: "Armenia",
+        favorite_ice_cream: "Chocolate, chocolate, and chocolate!",
+        githubLink: 'https://github.com/shantdashjian',
+        profileImage: 'https://avatars.githubusercontent.com/u/2113918?s=400&u=8af40a88b2b95b93e57fbfb6191989560877ab6a&v=4',
+        likes: 'Learning, teaching, and growing!',
+        load_check: false
+    },
     {
         name: "Tak",
         githubName: 'tak40',
         location: "Boston, MA, USA",
-        favorite_ice_cream: "",
+        favorite_ice_cream: "Vanilla, Vanilla, and VANILLA! Did I mention Vanilla?",
         githubLink: 'https://github.com/tak40',
         profileImage: '',
-        likes: 'Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.',
+        likes: 'At Scrimba Bootcamp, learning to code is like making ice cream - it starts cold and hard, but with the warmth of the community, it melts into something delightfully smooth... lol',
         load_check: false
     }
 ]
