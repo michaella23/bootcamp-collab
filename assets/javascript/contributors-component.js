@@ -227,6 +227,7 @@ scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
   checkLoadCount();
 
   console.log(loadCount);
+  scrimbaContributorsLoadMoreBtnEl.remove();
 })
 
 const init = function () {
