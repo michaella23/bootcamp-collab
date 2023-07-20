@@ -162,6 +162,17 @@ const contributors = [
       "At Scrimba Bootcamp, learning to code is like making ice cream - it starts cold and hard, but with the warmth of the community, it melts into something delightfully smooth... lol",
     load_check: false,
   },
+  {
+    name: "Ajo",
+    githubName: "ajoborgvold",
+    location: "Scandinavia",
+    favorite_ice_cream: "dark chocolate",
+    githubLink: "https://github.com/ajoborgvold",
+    profileImage: "",
+    likes: 
+      "Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.",
+    load_check: false,
+  },
 ];
 
 export { contributors };
