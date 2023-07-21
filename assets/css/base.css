@@ -120,6 +120,8 @@
   --clr-blueberry-pastel-awcoetzer: hsl(187, 75%, 76%);
   --clr-blueberry-pastel-tint-awcoetzer: hsl(187, 75%, 86%);
   --clr-maroon-overload-will-s-205: hsl(324, 71%, 14%);
+  --clr-maroon-overload-opacity-70: hsl(324, 71%, 14%, 70%);
+  --clr-blueberry-pastel-tint-opacity-70: hsl(187, 75%, 86%, 70%);
 
   /* color palettes */
   --clr-shadow: var(--clr-wet-cement-shade);
