@@ -8,14 +8,38 @@
 .header{
   display: flex;
   position: fixed;
-  right: 0;
+  /* right: 0; */
   z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-8) var(--spacing-16);
 }
 
+.nav-bar {
+  display: flex;
+  gap: var(--spacing-16);
+}
+
+.nav-item {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  text-decoration: underline;
+  box-shadow: unset;
+}
+
+/* Margin and padding decreased to create header layout that works for the nav bar as well */
 .theme-button {
-  float: right;
-  padding: 3rem;
-  margin: 3rem;
+  /* float: right; */
+  /* padding: 3rem; */
+  /* margin: 3rem; */
+  margin: unset;
+  padding: var(--spacing-16);
   
   background-color: var(--clr-button-plus);
   border-radius: 50%;
