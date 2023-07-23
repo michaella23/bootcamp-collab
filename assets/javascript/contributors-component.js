@@ -121,6 +121,9 @@ const createMoreContributorsElements = function () {
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
 
+const checkAllContributorsLoaded = function () {
+  return loadCount >= contributors.length
+}
 
 /*
     Below are a bunch of append element functions
