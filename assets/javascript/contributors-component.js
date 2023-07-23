@@ -121,11 +121,6 @@ const createMoreContributorsElements = function () {
   loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
 
-const checkLoadCount = function () {
-  if (loadCount >= contributors.length) {
-    scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
-  }
-}
 
 /*
     Below are a bunch of append element functions
@@ -224,8 +219,6 @@ const renderScrimbaContributors = function () {
 */
 scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
   createMoreContributorsElements();
-  checkLoadCount();
-
   console.log(loadCount);
   scrimbaContributorsLoadMoreBtnEl.remove();
 })
