@@ -199,9 +199,12 @@ const renderScrimbaContributors = function () {
     contriutors per click
 */
 scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
-  createMoreContributorsElements();
-  console.log(loadCount);
-  scrimbaContributorsLoadMoreBtnEl.remove();
+  if (!checkAllContributorsLoaded()) {
+    renderScrimbaContributors();
+  }
+  if (checkAllContributorsLoaded()) {
+    scrimbaContributorsLoadMoreBtnEl.remove()
+  }
 })
 
 const init = function () {
