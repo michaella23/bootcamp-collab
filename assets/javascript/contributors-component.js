@@ -168,18 +168,13 @@ const createScrimbaContributorsElements = function (index) {
   appendScrimbaContributorsContainerEl(scrimbaContributorsCardEl)
 }
 
-const randomRender = function () {
-  let randomPick = randomContributor();
-  let buffer = 0;
-
-  for (let i = 0; buffer !== loadAmount; i++) {
-    if (contributors[randomPick].load_check) {
-      randomPick = randomContributor();
-    } else {
-      createScrimbaContributorsElements(randomPick);
-      contributors[randomPick].load_check = true
-      buffer++
-    }
+const randomRender = function (loadAmount) {  
+  for (let i = 0; i < loadAmount; i++) {
+    if (checkAllContributorsLoaded()) return
+    let randomIndex = randomContributor();
+    createScrimbaContributorsElements(randomIndex)
+    // Delete selected element
+    contributors.splice(randomIndex, 1)
   }
 }
 
