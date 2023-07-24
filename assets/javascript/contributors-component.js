@@ -200,7 +200,6 @@ const renderScrimbaContributors = function () {
   //     buffer++
   //   }
   // }
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
 }
 
 /* 
