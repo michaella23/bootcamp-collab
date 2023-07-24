@@ -111,7 +111,7 @@ const createUserCommentEl = function (index) {
 }
 
 const checkAllContributorsLoaded = function () {
-  return loadCount >= contributors.length
+  return contributors.length === 0;
 }
 
 /*
