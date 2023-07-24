@@ -184,10 +184,7 @@ const randomRender = function () {
 }
 
 const renderScrimbaContributors = function () {
-  if (contributors.length <= loadAmount) {
-    scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
-  }
-  randomRender()
+  randomRender(6)
   // let randomPick = randomContributor();
   // let buffer = 0;
   
