@@ -5,8 +5,6 @@ import { contributors } from "./contributors.js";
 const scrimbaContributorsContainerEl = document.querySelector('.scrimba-contributors--container');
 const scrimbaContributorsLoadMoreBtnEl = document.querySelector('.load-more');
 
-let loadAmount, loadCount, currentContributors;
-
 /*
     The function below generates a random number for
     a random default profile image
@@ -216,9 +214,6 @@ scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
 })
 
 const init = function () {
-  loadAmount = 6;
-  currentContributors = [];
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
   renderScrimbaContributors();
 }
 
