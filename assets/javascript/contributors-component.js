@@ -110,17 +110,6 @@ const createUserCommentEl = function (index) {
   return userCommentEl;
 }
 
-const createMoreContributorsElements = function () {
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-  randomRender()
-  // for (let i = loadCount; i < loadAmount + loadCount; i++) {
-  //   if (i < contributors.length) {
-  //     createScrimbaContributorsElements(i);
-  //   }
-  // }
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-}
-
 const checkAllContributorsLoaded = function () {
   return loadCount >= contributors.length
 }
