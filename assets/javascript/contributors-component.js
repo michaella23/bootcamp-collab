@@ -171,7 +171,7 @@ const createScrimbaContributorsElements = function (index) {
   appendScrimbaContributorsContainerEl(scrimbaContributorsCardEl)
 }
 
-const renderScrimbaContributors = function (loadAmount) {  
+const renderScrimbaContributors = function () {
   for (let i = 0; i < loadAmount; i++) {
     if (checkAllContributorsLoaded()) return
     let randomIndex = randomContributor();
@@ -187,7 +187,7 @@ const renderScrimbaContributors = function (loadAmount) {
 */
 scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
   if (!checkAllContributorsLoaded()) {
-    renderScrimbaContributors(maxLoadOfContributors);
+    renderScrimbaContributors();
   }
   if (checkAllContributorsLoaded()) {
     scrimbaContributorsLoadMoreBtnEl.remove()
@@ -195,7 +195,7 @@ scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
 })
 
 const init = function () {
-  renderScrimbaContributors(maxLoadOfContributors);
+  renderScrimbaContributors();
 }
 
 init()
