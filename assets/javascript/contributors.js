@@ -169,8 +169,18 @@ const contributors = [
     favorite_ice_cream: "dark chocolate",
     githubLink: "https://github.com/ajoborgvold",
     profileImage: "",
-    likes: 
+    likes:
       "Scrimba Bootcamp rocks! I love the community and all the amazing projects people are building.",
+    load_check: false,
+  },
+  {
+    name: "Christina",
+    githubName: "codercreative",
+    location: "CA",
+    favorite_ice_cream: "cookie dough ice cream",
+    githubLink: "https://github.com/codercreative",
+    profileImage: "",
+    likes: "Love the Scrimba Bootcamp!",
     load_check: false,
   },
 ];
