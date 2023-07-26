@@ -5,6 +5,9 @@ import { contributors } from "./contributors.js";
 const scrimbaContributorsContainerEl = document.querySelector('.scrimba-contributors--container');
 const scrimbaContributorsLoadMoreBtnEl = document.querySelector('.load-more');
 
+// How many contributors to render
+const maxLoadOfContributors = 6;
+
 /*
     The function below generates a random number for
     a random default profile image
@@ -184,7 +187,7 @@ const renderScrimbaContributors = function (loadAmount) {
 */
 scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
   if (!checkAllContributorsLoaded()) {
-    renderScrimbaContributors();
+    renderScrimbaContributors(maxLoadOfContributors);
   }
   if (checkAllContributorsLoaded()) {
     scrimbaContributorsLoadMoreBtnEl.remove()
@@ -192,7 +195,7 @@ scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
 })
 
 const init = function () {
-  renderScrimbaContributors();
+  renderScrimbaContributors(maxLoadOfContributors);
 }
 
 init()
