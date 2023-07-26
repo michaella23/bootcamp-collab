@@ -5,7 +5,8 @@ import { contributors } from "./contributors.js";
 const scrimbaContributorsContainerEl = document.querySelector('.scrimba-contributors--container');
 const scrimbaContributorsLoadMoreBtnEl = document.querySelector('.load-more');
 
-let loadAmount, loadCount, currentContributors;
+// How many contributors to render
+const maxLoadOfContributors = 6;
 
 /*
     The function below generates a random number for
@@ -110,21 +111,8 @@ const createUserCommentEl = function (index) {
   return userCommentEl;
 }
 
-const createMoreContributorsElements = function () {
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-  randomRender()
-  // for (let i = loadCount; i < loadAmount + loadCount; i++) {
-  //   if (i < contributors.length) {
-  //     createScrimbaContributorsElements(i);
-  //   }
-  // }
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
-}
-
-const checkLoadCount = function () {
-  if (loadCount >= contributors.length) {
-    scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
-  }
+const checkAllContributorsLoaded = function () {
+  return contributors.length === 0;
 }
 
 /*
@@ -183,39 +171,17 @@ const createScrimbaContributorsElements = function (index) {
   appendScrimbaContributorsContainerEl(scrimbaContributorsCardEl)
 }
 
-const randomRender = function () {
-  let randomPick = randomContributor();
-  let buffer = 0;
-
-  for (let i = 0; buffer !== loadAmount; i++) {
-    if (contributors[randomPick].load_check) {
-      randomPick = randomContributor();
-    } else {
-      createScrimbaContributorsElements(randomPick);
-      contributors[randomPick].load_check = true
-      buffer++
-    }
-  }
-}
-
 const renderScrimbaContributors = function () {
-  if (contributors.length <= loadAmount) {
-    scrimbaContributorsLoadMoreBtnEl.classList.add('hide')
-  }
-  randomRender()
-  // let randomPick = randomContributor();
-  // let buffer = 0;
+  const loadAmount = maxLoadOfContributors > contributors.length
+    ? contributors.length
+    : maxLoadOfContributors
   
-  // for (let i = 0; buffer !== loadAmount; i++) {
-  //   if (contributors[randomPick].load_check) {
-  //     randomPick = randomContributor();
-  //   } else {
-  //     createScrimbaContributorsElements(randomPick);
-  //     contributors[randomPick].load_check = true
-  //     buffer++
-  //   }
-  // }
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
+  for (let i = 0; i < loadAmount; i++) {
+    let randomIndex = randomContributor();
+    createScrimbaContributorsElements(randomIndex)
+    // Delete selected element
+    contributors.splice(randomIndex, 1)
+  }
 }
 
 /* 
@@ -223,17 +189,15 @@ const renderScrimbaContributors = function () {
     contriutors per click
 */
 scrimbaContributorsLoadMoreBtnEl.addEventListener('click', function () {
-  createMoreContributorsElements();
-  checkLoadCount();
-
-  console.log(loadCount);
-  scrimbaContributorsLoadMoreBtnEl.remove();
+  if (!checkAllContributorsLoaded()) {
+    renderScrimbaContributors();
+  }
+  if (checkAllContributorsLoaded()) {
+    scrimbaContributorsLoadMoreBtnEl.remove()
+  }
 })
 
 const init = function () {
-  loadAmount = 6;
-  currentContributors = [];
-  loadCount = document.querySelectorAll('.scrimba-contributors-card').length;
   renderScrimbaContributors();
 }
 
