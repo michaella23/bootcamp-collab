@@ -172,8 +172,11 @@ const createScrimbaContributorsElements = function (index) {
 }
 
 const renderScrimbaContributors = function () {
+  const loadAmount = maxLoadOfContributors > contributors.length
+    ? contributors.length
+    : maxLoadOfContributors
+  
   for (let i = 0; i < loadAmount; i++) {
-    if (checkAllContributorsLoaded()) return
     let randomIndex = randomContributor();
     createScrimbaContributorsElements(randomIndex)
     // Delete selected element
