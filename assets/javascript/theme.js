@@ -51,4 +51,13 @@ function themeBtnHandler() {
     : lightTheme(this)
 }
 
-export { lightTheme, darkTheme, themeBtnHandler }
+const timeOfDay = (btnEl) => {
+  const date = new Date();
+  const hours = date.getHours();
+
+  hours > 17
+    ? darkTheme(btnEl)
+    : lightTheme(btnEl)
+}
+
+export { lightTheme, darkTheme, themeBtnHandler, timeOfDay }
