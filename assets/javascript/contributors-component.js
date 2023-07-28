@@ -41,6 +41,15 @@ const createUserImgBoxEl = function () {
 
 const createUserImgEl = function (index) {
   const userImgEl = document.createElement('img');
+  // if they have a profile image set the alt text should add their name to the alt text
+  // otherwise it serves an empty alt tag for screen readers to pass over
+  if(contributors[index].profileImage){
+    userImgEl.setAttribute('alt', `${contributors[index].name}'s profile image`);
+  } else {
+    userImgEl.setAttribute('alt', '');
+  };
+  
+  // give a random default avatar if they don't have a profile image
   const ifUserImage = contributors[index].profileImage ? contributors[index].profileImage : randomDefaultProfilePic();
   userImgEl.classList.add('scrimba-contributors--user-img');
   userImgEl.setAttribute('src', ifUserImage);
