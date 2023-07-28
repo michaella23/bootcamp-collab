@@ -4,6 +4,7 @@ const header = document.querySelector('.header')
 const navItems = document.getElementsByClassName('nav-item');
 
 const darkTheme = (btnEl) => {
+  localStorage.setItem('currentTheme', JSON.stringify('DARK'));
   document.body.style.color = "silver";
   document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
   btnEl.textContent = "DARK";
@@ -21,6 +22,8 @@ const darkTheme = (btnEl) => {
 }
 
 const lightTheme = (btnEl) => {
+  localStorage.setItem('currentTheme', JSON.stringify('LIGHT'));
+
   document.body.style.color = "var(--clr-paragraph)";
   document.body.style.background = "var(--clr-background-tint)";
   btnEl.textContent = "LIGHT";

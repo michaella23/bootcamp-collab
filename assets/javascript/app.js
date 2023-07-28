@@ -28,29 +28,34 @@ setInterval(() => {
     greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
 }, 1000)
 
-const timeOfDay = () => {
-    const date = new Date();
-    const hours = date.getHours();
+const theme = JSON.parse(localStorage.getItem('currentTheme'));
+theme && theme === 'DARK'
+  ? darkTheme(themeBtnEl)
+  : lightTheme(themeBtnEl)
 
-    if (hours > 17) {
-        darkTheme(themeBtnEl)
-    } else {
-        lightTheme(themeBtnEl)
-    }
+const timeOfDay = () => {
+  const date = new Date();
+  const hours = date.getHours();
+
+  theme && hours > 17
+    ? darkTheme(themeBtnEl)
+    : lightTheme(themeBtnEl)
 }
 timeOfDay();
 
-themeBtnEl.addEventListener('click', function () {
-    const toggleIs = themeBtnEl.textContent;
-    // the user is saving the date object to a variable
-    const date = new Date();
-    // then pulling the hours from the date object
-    const hours = date.getHours();
+themeBtnEl.addEventListener('click', themeBtnHandler)
 
-    // toggle theme of the webpage
-     if (toggleIs == "DARK") {
-        lightTheme(themeBtnEl)
-    } else {
-        darkTheme(themeBtnEl)
-    }
-})
+function themeBtnHandler() {
+  const currentTheme = JSON.parse(localStorage.getItem('currentTheme')) || timeOfDay();
+  const nextTheme = 'LIGHT' === currentTheme ? 'DARK' : 'LIGHT';
+
+  // the user is saving the date object to a variable
+  const date = new Date();
+  // then pulling the hours from the date object
+  const hours = date.getHours();
+
+  // toggle theme of the webpage
+  nextTheme === "DARK"
+    ? darkTheme(themeBtnEl)
+    : lightTheme(themeBtnEl)
+}
