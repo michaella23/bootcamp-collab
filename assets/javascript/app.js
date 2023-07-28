@@ -7,6 +7,7 @@ const currentLocalTimeEl = document.getElementById('current-local-time');
 const greetingEl = document.querySelector('#greeting');
 const header = document.querySelector('.header')
 const navItems = document.getElementsByClassName('nav-item');
+const contributors = document.querySelector('.scrimba-contributors');
 
 setInterval(() => {
     const currentLocalTime = new Date().toLocaleTimeString();
@@ -37,6 +38,7 @@ const darkTheme = () => {
     themeBtnEl.textContent = "DARK";
     themeLnkEl.style.color="var(--clr-terracotta)";
     themeLnkEl2.style.color="var(--clr-terracotta)";
+    contributors.style.color="var(--clr-paragraph)";
     
     // header theme switch
     header.style.background = "var(--clr-maroon-overload-opacity-70)";
@@ -54,6 +56,7 @@ const lightTheme = () => {
     themeBtnEl.textContent = "LIGHT";
     themeLnkEl.style.color="var(--clr-paragraph)";
     themeLnkEl2.style.color="var(--clr-paragraph)";
+    contributors.style.color="inherit";
     
     // header theme switch
     header.style.background = "var(--clr-blueberry-pastel-tint-opacity-70)";
