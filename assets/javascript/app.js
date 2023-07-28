@@ -1,5 +1,5 @@
 'use strict';
-import { lightTheme, darkTheme, themeBtnHandler } from './theme.js'
+import { lightTheme, darkTheme, themeBtnHandler, timeOfDay } from './theme.js'
 
 const currentLocalTimeEl = document.getElementById('current-local-time');
 const greetingEl = document.querySelector('#greeting');
@@ -38,6 +38,8 @@ if (currentTheme) {
   timeOfDay(themeBtnEl);
 }
 
-themeBtnEl.addEventListener('click', themeBtnHandler)
+themeBtnEl.addEventListener('click', () => {
+  themeBtnHandler(themeBtnEl)
+})
 
 

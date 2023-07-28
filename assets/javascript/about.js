@@ -12,4 +12,6 @@ if (currentTheme) {
   timeOfDay(themeBtnEl);
 }
 
-themeBtnEl.addEventListener('click', themeBtnHandler)
+themeBtnEl.addEventListener('click', () => {
+  themeBtnHandler(themeBtnEl)
+})

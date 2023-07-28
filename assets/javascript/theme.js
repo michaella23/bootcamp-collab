@@ -40,15 +40,15 @@ const lightTheme = (btnEl) => {
   }
 }
 
-function themeBtnHandler() {
+function themeBtnHandler(btnEl) {
   // If no theme in localStorage, use timeOfDay() to decide theme
   const currentTheme = JSON.parse(localStorage.getItem('currentTheme')) || timeOfDay();
   const nextTheme = 'LIGHT' === currentTheme ? 'DARK' : 'LIGHT';
 
   // toggle theme of the webpage
   nextTheme === "DARK"
-    ? darkTheme(this)
-    : lightTheme(this)
+    ? darkTheme(btnEl)
+    : lightTheme(btnEl)
 }
 
 const timeOfDay = (btnEl) => {
