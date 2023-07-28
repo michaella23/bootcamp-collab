@@ -45,11 +45,6 @@ function themeBtnHandler() {
   const currentTheme = JSON.parse(localStorage.getItem('currentTheme')) || timeOfDay();
   const nextTheme = 'LIGHT' === currentTheme ? 'DARK' : 'LIGHT';
 
-  // the user is saving the date object to a variable
-  const date = new Date();
-  // then pulling the hours from the date object
-  const hours = date.getHours();
-
   // toggle theme of the webpage
   nextTheme === "DARK"
     ? darkTheme(this)
