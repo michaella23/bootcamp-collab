@@ -7,7 +7,6 @@ const darkTheme = (btnEl) => {
   localStorage.setItem('currentTheme', JSON.stringify('DARK'));
   document.body.style.color = "silver";
   document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
-  btnEl.textContent = "DARK";
   themeLnkEl.style.color="var(--clr-terracotta)";
   themeLnkEl2.style.color="var(--clr-terracotta)";
   
@@ -26,7 +25,6 @@ const lightTheme = (btnEl) => {
 
   document.body.style.color = "var(--clr-paragraph)";
   document.body.style.background = "var(--clr-background-tint)";
-  btnEl.textContent = "LIGHT";
   themeLnkEl.style.color="var(--clr-paragraph)";
   themeLnkEl2.style.color="var(--clr-paragraph)";
   

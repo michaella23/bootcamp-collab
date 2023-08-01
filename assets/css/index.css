@@ -5,7 +5,7 @@
 */
 
 /* header elements */
-.header{
+.header {
   display: flex;
   position: fixed;
   /* right: 0; */
@@ -31,31 +31,6 @@
 .nav-item:active {
   text-decoration: underline;
   box-shadow: unset;
-}
-
-/* Margin and padding decreased to create header layout that works for the nav bar as well */
-.theme-button {
-  /* float: right; */
-  /* padding: 3rem; */
-  /* margin: 3rem; */
-  margin: unset;
-  padding: var(--spacing-16);
-  
-  background-color: var(--clr-button-plus);
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid var(--clr-paragraph);
-
-  color: var(--clr-paragraph);
-  font-size: 1rem;
-  font-weight: bolder;
-  transition: 0.5s ease-in-out;
-}
-
-.theme-button:hover {
-  transform: translateY(3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: #daaa44;
 }
 
 /* section-hero */
@@ -319,4 +294,64 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 1;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e9e9e9;
+  -webkit-transition: .4s;
+  transition: .4s;
+  box-shadow: 0 0 3px #000;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  background-image: url('../images/hero/sun.png');
+  background-size: cover;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(254, 237, 91);
+  box-shadow: 0 0 3px #000;
 }
