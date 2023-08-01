@@ -18,3 +18,8 @@ li p {
 .project-list-item-header {
   margin-bottom: 0.5em;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
