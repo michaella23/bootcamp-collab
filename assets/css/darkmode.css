@@ -1,0 +1,32 @@
+/* ==========================
+      Dark Mode Styles
+========================== */
+
+/* ===============================================
+   NOTE: for future dark-mode styles make sure to 
+   add .dark-mode before your style declarations
+   like => .dark-mode .img-main { ... }
+=============================================== */
+
+.dark-mode .link-color,
+.dark-mode .done-by--link {
+    color: var(--clr-terracotta);
+}
+
+.dark-mode .scrimba-contributors {
+    color: var(--clr-paragraph);
+}
+
+body.dark-mode,
+.dark-mode header {
+    background: var(--clr-maroon-overload-will-s-205);
+}
+
+body.dark-mode,
+.dark-mode .nav-item {
+    color: silver;
+}
+
+.dark-mode header {
+    box-shadow: 0 0 5px var(--clr-blinding-light);
+}
