@@ -4,7 +4,10 @@
   take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
 */
 
-/* header elements */
+/* ===========================
+       header elements 
+=========================== */
+
 .header {
   display: flex;
   position: fixed;
@@ -33,45 +36,15 @@
   box-shadow: unset;
 }
 
-/* section-hero */
+/* ===========================
+         section-hero 
+=========================== */
+
 .section-hero {}
 
 .hero {}
 
 .hero-text-box {}
-
-.current-local-time {
-  text-align: right;
-  font-size: var(--font-24);
-  background: linear-gradient(to right,
-      #3c3cbd,
-      #0059ff,
-      #8f6901,
-      #ff3399,
-      #3f3fd1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow_animation 10s 1s infinite;
-  background-size: 400% 100%;
-  margin-bottom: var(--spacing-4);
-  z-index: 1;
-}
-
-/* 
-  moving rainbow gradient effect on the Current Local time text
-*/
-@keyframes rainbow_animation {
-
-  0%,
-  100% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 100% 0;
-  }
-}
 
 .hero-text {
   margin-bottom: var(--spacing-12);
@@ -91,14 +64,6 @@
   box-shadow: 0 0.4rem 0.4rem -0.5rem var(--clr-shadow);
 }
 
-.scrimba {
-  background-color: var(--clr-button-plus);
-}
-
-/* 
-  This targets the img container so it can centered 
-  within the grids cell
-*/
 .hero-img-box {
   display: flex;
   justify-content: center;
@@ -117,7 +82,48 @@
   transform: scale(1.6);
 }
 
-/* section scrimba-likes */
+.current-local-time {
+  text-align: right;
+  font-size: var(--font-24);
+  background: linear-gradient(to right,
+      #3c3cbd,
+      #0059ff,
+      #8f6901,
+      #ff3399,
+      #3f3fd1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 10s 1s infinite;
+  background-size: 400% 100%;
+  margin-bottom: var(--spacing-4);
+  z-index: 1;
+}
+
+.scrimba {
+  background-color: var(--clr-button-plus);
+}
+
+/* =============================
+ moving rainbow gradient effect
+============================= */
+
+@keyframes rainbow_animation {
+
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+/* ================================
+       section scrimba-likes 
+================================ */
+
 .section-scrimba-contributors {}
 
 .scrimba-contributors {}
@@ -258,7 +264,10 @@
   color: var(--clr-paragraph);
 }
 
-/* section footer */
+/* =========================
+       section footer
+========================= */
+
 .done-by {
   font-size: var(--font-12);
   line-height: var(--line-height-15);
@@ -280,10 +289,9 @@
   border-bottom: 1px solid var(--clr-paragraph);
 }
 
-
-/* 
+/* ============================
   CSS hover effects for links
-*/
+============================ */
 
 .hover-effect:hover {
   background: #8A2387;
@@ -295,6 +303,10 @@
   opacity: 1;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
 }
+
+/* ===========================
+      Theme Switch CSS
+=========================== */
 
 .switch {
   position: relative;
@@ -341,6 +353,7 @@ input:checked+.slider:before {
 }
 
 /* Rounded sliders */
+
 .slider.round {
   border-radius: 34px;
 }
