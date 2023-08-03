@@ -1,11 +1,15 @@
 @import url('./base.css');
+@import url('./darkmode.css');
 /* 
   Only styles for index.html go here,
   take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
 */
 
-/* header elements */
-.header{
+/* ===========================
+       header elements 
+=========================== */
+
+.header {
   display: flex;
   position: fixed;
   /* right: 0; */
@@ -33,70 +37,15 @@
   box-shadow: unset;
 }
 
-/* Margin and padding decreased to create header layout that works for the nav bar as well */
-.theme-button {
-  /* float: right; */
-  /* padding: 3rem; */
-  /* margin: 3rem; */
-  margin: unset;
-  padding: var(--spacing-16);
-  
-  background-color: var(--clr-button-plus);
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid var(--clr-paragraph);
+/* ===========================
+         section-hero 
+=========================== */
 
-  color: var(--clr-paragraph);
-  font-size: 1rem;
-  font-weight: bolder;
-  transition: 0.5s ease-in-out;
-}
-
-.theme-button:hover {
-  transform: translateY(3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: #daaa44;
-}
-
-/* section-hero */
 .section-hero {}
 
 .hero {}
 
 .hero-text-box {}
-
-.current-local-time {
-  text-align: right;
-  font-size: var(--font-24);
-  background: linear-gradient(to right,
-      #3c3cbd,
-      #0059ff,
-      #8f6901,
-      #ff3399,
-      #3f3fd1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow_animation 10s 1s infinite;
-  background-size: 400% 100%;
-  margin-bottom: var(--spacing-4);
-  z-index: 1;
-}
-
-/* 
-  moving rainbow gradient effect on the Current Local time text
-*/
-@keyframes rainbow_animation {
-
-  0%,
-  100% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 100% 0;
-  }
-}
 
 .hero-text {
   margin-bottom: var(--spacing-12);
@@ -116,14 +65,6 @@
   box-shadow: 0 0.4rem 0.4rem -0.5rem var(--clr-shadow);
 }
 
-.scrimba {
-  background-color: var(--clr-button-plus);
-}
-
-/* 
-  This targets the img container so it can centered 
-  within the grids cell
-*/
 .hero-img-box {
   display: flex;
   justify-content: center;
@@ -142,7 +83,48 @@
   transform: scale(1.6);
 }
 
-/* section scrimba-likes */
+.current-local-time {
+  text-align: right;
+  font-size: var(--font-24);
+  background: linear-gradient(to right,
+      #3c3cbd,
+      #0059ff,
+      #8f6901,
+      #ff3399,
+      #3f3fd1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 10s 1s infinite;
+  background-size: 400% 100%;
+  margin-bottom: var(--spacing-4);
+  z-index: 1;
+}
+
+.scrimba {
+  background-color: var(--clr-button-plus);
+}
+
+/* =============================
+ moving rainbow gradient effect
+============================= */
+
+@keyframes rainbow_animation {
+
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+/* ================================
+       section scrimba-likes 
+================================ */
+
 .section-scrimba-contributors {}
 
 .scrimba-contributors {}
@@ -283,7 +265,10 @@
   color: var(--clr-paragraph);
 }
 
-/* section footer */
+/* =========================
+       section footer
+========================= */
+
 .done-by {
   font-size: var(--font-12);
   line-height: var(--line-height-15);
@@ -305,10 +290,9 @@
   border-bottom: 1px solid var(--clr-paragraph);
 }
 
-
-/* 
+/* ============================
   CSS hover effects for links
-*/
+============================ */
 
 .hover-effect:hover {
   background: #8A2387;
@@ -319,4 +303,69 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 1;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+/* ===========================
+      Theme Switch CSS
+=========================== */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e9e9e9;
+  -webkit-transition: .4s;
+  transition: .4s;
+  box-shadow: 0 0 3px #000;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  background-image: url('../images/hero/sun.png');
+  background-size: cover;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(254, 237, 91);
+  box-shadow: 0 0 3px #000;
 }

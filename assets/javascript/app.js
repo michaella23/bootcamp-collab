@@ -1,12 +1,8 @@
 'use strict';
+import { lightTheme, darkTheme, themeBtnHandler, timeOfDay } from './theme.js'
 
-const themeLnkEl = document.querySelector('.link-color');
-const themeLnkEl2 = document.querySelector('.done-by--link');
-const themeBtnEl = document.querySelector('.theme-button');
 const currentLocalTimeEl = document.getElementById('current-local-time');
 const greetingEl = document.querySelector('#greeting');
-const header = document.querySelector('.header')
-const navItems = document.getElementsByClassName('nav-item');
 
 setInterval(() => {
     const currentLocalTime = new Date().toLocaleTimeString();
@@ -31,63 +27,19 @@ setInterval(() => {
     greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
 }, 1000)
 
-const darkTheme = () => {
-    document.body.style.color = "silver";
-    document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
-    themeBtnEl.textContent = "DARK";
-    themeLnkEl.style.color="var(--clr-terracotta)";
-    themeLnkEl2.style.color="var(--clr-terracotta)";
-    
-    // header theme switch
-    header.style.background = "var(--clr-maroon-overload-opacity-70)";
-    header.style.boxShadow = "0 0 5px var(--clr-blinding-light)";
-    
-    // nav bar theme switch
-    for (let item of navItems) {
-        item.style.color = "silver"
-    }
+const themeBtnEl = document.querySelector('.theme-button');
+const currentTheme = JSON.parse(localStorage.getItem('currentTheme'));
+
+if (currentTheme) {
+  currentTheme === 'DARK'
+    ? darkTheme(themeBtnEl)
+    : lightTheme(themeBtnEl)
+} else {
+  timeOfDay(themeBtnEl);
 }
 
-const lightTheme = () => {
-    document.body.style.color = "var(--clr-paragraph)";
-    document.body.style.background = "var(--clr-background-tint)";
-    themeBtnEl.textContent = "LIGHT";
-    themeLnkEl.style.color="var(--clr-paragraph)";
-    themeLnkEl2.style.color="var(--clr-paragraph)";
-    
-    // header theme switch
-    header.style.background = "var(--clr-blueberry-pastel-tint-opacity-70)";
-    header.style.boxShadow = "0 0 5px var(--clr-shadow)";
-
-    // nav bar theme switch
-    for (let item of navItems) {
-        item.style.color = "var(--clr-paragraph)"
-    }
-}
-
-const timeOfDay = () => {
-    const date = new Date();
-    const hours = date.getHours();
-
-    if (hours > 17) {
-        darkTheme()
-    } else {
-        lightTheme()
-    }
-}
-timeOfDay();
-
-themeBtnEl.addEventListener('click', function () {
-    const toggleIs = themeBtnEl.textContent;
-    // the user is saving the date object to a variable
-    const date = new Date();
-    // then pulling the hours from the date object
-    const hours = date.getHours();
-
-    // toggle theme of the webpage
-     if (toggleIs == "DARK") {
-        lightTheme()
-    } else {
-        darkTheme()
-    }
+themeBtnEl.addEventListener('click', () => {
+  themeBtnHandler(themeBtnEl)
 })
+
+

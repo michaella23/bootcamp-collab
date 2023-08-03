@@ -183,6 +183,16 @@ const contributors = [
     likes: "Love the Scrimba Bootcamp!",
     load_check: false,
   },
+  {
+    name: "Bradley",
+    githubName: "bbrazis",
+    location: "OR",
+    favorite_ice_cream: "chocolate",
+    githubLink: "https://github.com/bbrazis",
+    profileImage: "https://avatars.githubusercontent.com/u/32001385?v=4",
+    likes: "Video games, cats, and movies",
+    load_check: false,
+  },
 ];
 
 export { contributors };
