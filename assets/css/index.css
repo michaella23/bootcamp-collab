@@ -1,4 +1,5 @@
 @import url('./base.css');
+@import url('./darkmode.css');
 /* 
   Only styles for index.html go here,
   take a look at the STYLE_GUIDE.md to get a better understanding of CSS Variables and importing fonts & other stylesheets.
