@@ -13,6 +13,11 @@
     color: var(--clr-terracotta);
 }
 
+.dark-mode .done-by--link:hover,
+.dark-mode .done-by--link:active {
+  border-bottom: 1px solid var(--clr-terracotta);
+}
+
 .dark-mode .scrimba-contributors {
     color: var(--clr-paragraph);
 }
