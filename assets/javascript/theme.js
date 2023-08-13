@@ -8,7 +8,7 @@ function darkTheme(btnEl) {
   // adds dark-mode class to body tag
   document.body.classList.add('dark-mode');
   // sets checkbox to checked if dark-mode is enabled
-  themeSwitch.checked = true;
+  btnEl.checked = true;
 
   // document.body.style.color = "silver";
   // document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
@@ -30,7 +30,7 @@ function lightTheme(btnEl) {
   // removes dark-mode class from body tag
   document.body.classList.remove('dark-mode');
   // removes checked from checkbox if dark-mode is not enabled
-  themeSwitch.checked = false;
+  btnEl.checked = false;
   // document.body.style.color = "var(--clr-paragraph)";
   // document.body.style.background = "var(--clr-background-tint)";
   // themeLnkEl.style.color="var(--clr-paragraph)";
