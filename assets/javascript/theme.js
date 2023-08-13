@@ -3,7 +3,7 @@
 // const header = document.querySelector('.header')
 // const navItems = document.getElementsByClassName('nav-item');
 
-const darkTheme = (btnEl) => {
+function darkTheme(btnEl) {
   localStorage.setItem('currentTheme', JSON.stringify('DARK'));
   // adds dark-mode class to body tag
   document.body.classList.add('dark-mode');
@@ -25,7 +25,7 @@ const darkTheme = (btnEl) => {
   // }
 }
 
-const lightTheme = (btnEl) => {
+function lightTheme(btnEl) {
   localStorage.setItem('currentTheme', JSON.stringify('LIGHT'));
   // removes dark-mode class from body tag
   document.body.classList.remove('dark-mode');
