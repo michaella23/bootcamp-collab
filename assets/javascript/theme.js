@@ -1,9 +1,7 @@
-const themeSwitch = document.getElementById('theme-switch');
-
-const themeLnkEl = document.querySelector('.link-color');
-const themeLnkEl2 = document.querySelector('.done-by--link');
-const header = document.querySelector('.header')
-const navItems = document.getElementsByClassName('nav-item');
+// const themeLnkEl = document.querySelector('.link-color');
+// const themeLnkEl2 = document.querySelector('.done-by--link');
+// const header = document.querySelector('.header')
+// const navItems = document.getElementsByClassName('nav-item');
 
 const darkTheme = (btnEl) => {
   localStorage.setItem('currentTheme', JSON.stringify('DARK'));
