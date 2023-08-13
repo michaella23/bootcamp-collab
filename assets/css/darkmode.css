@@ -9,7 +9,9 @@
 =============================================== */
 
 .dark-mode .link-color,
-.dark-mode .done-by--link {
+.dark-mode .done-by--link,
+.dark-mode .done-by--link:link,
+.dark-mode .done-by--link:visited{
     color: var(--clr-terracotta);
 }
 
