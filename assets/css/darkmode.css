@@ -9,8 +9,15 @@
 =============================================== */
 
 .dark-mode .link-color,
-.dark-mode .done-by--link {
+.dark-mode .done-by--link,
+.dark-mode .done-by--link:link,
+.dark-mode .done-by--link:visited{
     color: var(--clr-terracotta);
+}
+
+.dark-mode .done-by--link:hover,
+.dark-mode .done-by--link:active {
+  border-bottom: 1px solid var(--clr-terracotta);
 }
 
 .dark-mode .scrimba-contributors {
