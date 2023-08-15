@@ -1,17 +1,18 @@
 'use strict';
 import { lightTheme, darkTheme, themeBtnHandler, timeOfDay } from './theme.js'
 
-const themeBtnEl = document.querySelector('.theme-button');
+// const themeBtnEl = document.querySelector('.theme-button');
+const themeSwitch = document.getElementById('theme-switch');
 const currentTheme = JSON.parse(localStorage.getItem('currentTheme'));
 
 if (currentTheme) {
   currentTheme === 'DARK'
-    ? darkTheme(themeBtnEl)
-    : lightTheme(themeBtnEl)
+    ? darkTheme(themeSwitch)
+    : lightTheme(themeSwitch)
 } else {
-  timeOfDay(themeBtnEl);
+  timeOfDay(themeSwitch);
 }
 
-themeBtnEl.addEventListener('click', () => {
-  themeBtnHandler(themeBtnEl)
+themeSwitch.addEventListener('click', () => {
+  themeBtnHandler(themeSwitch)
 })
