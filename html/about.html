@@ -1,58 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootcamp Collab</title>
-    <link rel="icecream icon" href="./assets/images/hero/hero-min.png">
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/about.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
+    <link rel="icecream icon" href="./assets/images/hero/hero-min.png" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
     <header class="header">
-        <nav class="nav-bar">
-            <a href="../index.html" class="nav-item">Home</a>
-            <a href="open-source-projects.html" class="nav-item">Open Source Projects</a>
-            <a href="about.html" class="nav-item">About</a>
-        </nav>
+      <nav class="nav-bar">
+        <span class="nav-span">
+          <a href="../index.html" class="nav-item">Home</a>
+        </span>
+        <span class="nav-span">
+          <a href="./open-source-projects.html" class="nav-item"
+            >Open Source Projects</a
+          >
+        </span>
+        <span class="nav-span nav-span-current">
+          <a href="./about.html" class="nav-item nav-item-current">About</a>
+        </span>
         <label class="switch">
-            <input type="checkbox" id="theme-switch">
-            <span class="slider round theme-button"></span>
-            <span class="visually-hidden">Theme switch toggle</span>
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider round theme-button"></span>
+          <span class="visually-hidden">Theme switch toggle</span>
         </label>
+      </nav>
     </header>
     <section class="section-padding">
-      <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%">
         <iframe
-        style="position:absolute; width:100%; height:100%;"
-        src="https://getyarn.io/yarn-clip/e781a98f-e18a-4db3-b7dd-8a5fc9aca4dd/embed?autoplay=false&responsive=true"
-        frameborder="0"
+          style="position: absolute; width: 100%; height: 100%"
+          src="https://getyarn.io/yarn-clip/e781a98f-e18a-4db3-b7dd-8a5fc9aca4dd/embed?autoplay=false&responsive=true"
+          frameborder="0"
         ></iframe>
       </div>
     </section>
     <footer class="section-padding section-footer">
       <div class="container">
-          <div class="footer-text-box center-text">
-              <p class="done-by">
-                  This project is done by
-                  <a href="https://github.com/michaella23/bootcamp-collab" class="done-by--link" target="_blank">
-                      Scrimba Bootcamp Students
-                  </a> |
-                  <!-- 
+        <div class="footer-text-box center-text">
+          <p class="done-by">
+            This project is done by
+            <a
+              href="https://github.com/michaella23/bootcamp-collab"
+              class="done-by--link"
+              target="_blank"
+            >
+              Scrimba Bootcamp Students
+            </a>
+            |
+            <!-- 
                       DON'T REMOVE THIS UNTIL CURRENT IMAGE IS REPLACED
                   -->
-                  <a href="https://www.freepik.com/author/catalyststuff" target="_blank" class="done-by--link link-color">
-                      Images by catalyststuff
-                  </a> on Freepik
-              </p>
-          </div>
+            <a
+              href="https://www.freepik.com/author/catalyststuff"
+              target="_blank"
+              class="done-by--link link-color"
+            >
+              Images by catalyststuff
+            </a>
+            on Freepik
+          </p>
+        </div>
       </div>
     </footer>
     <script src="../assets/javascript/about.js" type="Module"></script>
-</body>
-
+  </body>
 </html>
