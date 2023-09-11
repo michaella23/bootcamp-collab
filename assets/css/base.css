@@ -119,6 +119,7 @@
   /* Add your colors here */
   --clr-blueberry-pastel-awcoetzer: hsl(187, 75%, 76%);
   --clr-blueberry-pastel-tint-awcoetzer: hsl(187, 75%, 86%);
+  --clr-blueberry-pastel-dark: hsl(195, 83%, 38%);
   --clr-maroon-overload-will-s-205: hsl(324, 71%, 14%);
   --clr-maroon-overload-opacity-70: hsl(324, 71%, 14%, 70%);
   --clr-blueberry-pastel-tint-opacity-70: hsl(187, 75%, 86%, 70%);
@@ -366,5 +367,4 @@ body {
     padding: 0 var(--spacing-32) !important;
     row-gap: var(--spacing-24) !important;
   }
-
 }
