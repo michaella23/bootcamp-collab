@@ -1,108 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootcamp Collab</title>
-    <link rel="icecream icon" href="./assets/images/hero/hero-min.png">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+    <link rel="icecream icon" href="./assets/images/hero/hero-min.png" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="nav-bar">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="html/open-source-projects.html" class="nav-item">Open Source Projects</a>
-            <a href="html/about.html" class="nav-item">About</a>
-        </nav>
+      <nav class="nav-bar">
+        <span class="nav-span nav-span-current">
+          <a href="index.html" class="nav-item nav-item-current">Home</a>
+        </span>
+        <span class="nav-span">
+          <a href="html/open-source-projects.html" class="nav-item"
+            >Open Source Projects</a
+          >
+        </span>
+        <span class="nav-span">
+          <a href="html/about.html" class="nav-item">About</a>
+        </span>
         <label class="switch">
-            <input type="checkbox" id="theme-switch">
-            <span class="slider round theme-button"></span>
-            <span class="visually-hidden">Theme switch toggle</span>
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider round theme-button"></span>
+          <span class="visually-hidden">Theme switch toggle</span>
         </label>
+      </nav>
     </header>
 
     <main class="main">
-        <section class="section-padding section-hero">
-            <div class="container container--hero">
-                <div class="hero grid grid--2-cols grid--center-v">
-                    <div class="hero-text-box">
-                        <span id="current-local-time" class="pre-heading display-block current-local-time"></span>
-                        <span id="greeting" class="pre-heading display-block">
-                            Hello👋, bootcamp students!
-                        </span>
-                        <h1 class="heading-primary">
-                            Scrimbas Exclusive Open Source Project
-                        </h1>
-                        <p class="hero-text">
-                            Welcome bootcamp students to experience an opportunity to practice forking, branching,
-                            making changes and making pull requests to an open source project.
-                        </p>
-                        <p class="hero-text">
-                            If you interested in joining this collaboration, join the bootcamp with the button below.
-                        </p>
-                        <a href="https://github.com/michaella23/bootcamp-collab" target="_blank" class="link link--hero margin-right-sm hover-effect">Project Repo</a>
-                        <a href="https://scrimba.com/bootcamp" target="_blank" class="link link--hero scrimba hover-effect">Join the Bootcamp</a>
-                    </div>
-
-                    <picture class="hero-img-box">
-                        <source srcset="./assets/images/hero/hero.webp" type="image/webp">
-                        <source srcset="./assets/images/hero/hero-min.png" type="image/png">
-
-                        <img src="./assets/images/hero/hero-min.png" alt="" class="hero-img">
-                    </picture>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding section-scrimba-contributors">
-            <!-- section header -->
-            <div class="container">
-                <span class="pre-heading">Scrimba = ❤️</span>
-                <h2 class="heading-secondary">
-                    Meet our amazing contributors
-                </h2>
+      <section class="section-padding section-hero">
+        <div class="container container--hero">
+          <div class="hero grid grid--2-cols grid--center-v">
+            <div class="hero-text-box">
+              <span
+                id="current-local-time"
+                class="pre-heading display-block current-local-time"
+              ></span>
+              <span id="greeting" class="pre-heading display-block">
+                Hello👋, bootcamp students!
+              </span>
+              <h1 class="heading-primary">
+                Scrimbas Exclusive Open Source Project
+              </h1>
+              <p class="hero-text">
+                Welcome bootcamp students to experience an opportunity to
+                practice forking, branching, making changes and making pull
+                requests to an open source project.
+              </p>
+              <p class="hero-text">
+                If you interested in joining this collaboration, join the
+                bootcamp with the button below.
+              </p>
+              <a
+                href="https://github.com/michaella23/bootcamp-collab"
+                target="_blank"
+                class="link link--hero margin-right-sm hover-effect"
+                >Project Repo</a
+              >
+              <a
+                href="https://scrimba.com/bootcamp"
+                target="_blank"
+                class="link link--hero scrimba hover-effect"
+                >Join the Bootcamp</a
+              >
             </div>
 
-            <!-- section component -->
-            <div class="scrimba-contributors">
-                <div class="container grid grid--2-cols scrimba-contributors--container">
-                    <button class="load-more">
-                        <ion-icon name="arrow-down-outline" class="load-more--icon"></ion-icon>
-                    </button>
-                    
-                </div>
-                
-            </div>
-        </section>
+            <picture class="hero-img-box">
+              <source
+                srcset="./assets/images/hero/hero.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./assets/images/hero/hero-min.png"
+                type="image/png"
+              />
+
+              <img
+                src="./assets/images/hero/hero-min.png"
+                alt=""
+                class="hero-img"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding section-scrimba-contributors">
+        <!-- section header -->
+        <div class="container">
+          <span class="pre-heading">Scrimba = ❤️</span>
+          <h2 class="heading-secondary">Meet our amazing contributors</h2>
+        </div>
+
+        <!-- section component -->
+        <div class="scrimba-contributors">
+          <div
+            class="container grid grid--2-cols scrimba-contributors--container"
+          >
+            <button class="load-more">
+              <ion-icon
+                name="arrow-down-outline"
+                class="load-more--icon"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="section-padding section-footer">
-        <div class="container">
-            <div class="footer-text-box center-text">
-                <p class="done-by">
-                    This project is done by
-                    <a href="https://github.com/michaella23/bootcamp-collab" class="done-by--link" target="_blank">
-                        Scrimba Bootcamp Students
-                    </a> |
-                    <!-- 
+      <div class="container">
+        <div class="footer-text-box center-text">
+          <p class="done-by">
+            This project is done by
+            <a
+              href="https://github.com/michaella23/bootcamp-collab"
+              class="done-by--link"
+              target="_blank"
+            >
+              Scrimba Bootcamp Students
+            </a>
+            |
+            <!-- 
                         DON'T REMOVE THIS UNTIL CURRENT IMAGE IS REPLACED
                     -->
-                    <a href="https://www.freepik.com/author/catalyststuff" target="_blank" class="done-by--link link-color">
-                        Images by catalyststuff
-                    </a> on Freepik
-                </p>
-            </div>
+            <a
+              href="https://www.freepik.com/author/catalyststuff"
+              target="_blank"
+              class="done-by--link link-color"
+            >
+              Images by catalyststuff
+            </a>
+            on Freepik
+          </p>
         </div>
+      </div>
     </footer>
 
     <script src="./assets/javascript/app.js" type="Module"></script>
     <script src="./assets/javascript/contributors.js" type="Module"></script>
-    <script src="./assets/javascript/contributors-component.js" type="Module"></script>
-</body>
-
+    <script
+      src="./assets/javascript/contributors-component.js"
+      type="Module"
+    ></script>
+  </body>
 </html>

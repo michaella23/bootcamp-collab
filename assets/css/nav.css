@@ -1,0 +1,105 @@
+/* ==========================
+      Nav Styles
+========================== */
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-24);
+  margin: 0 65px 0 auto;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-24);
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--clr-blinding-light),
+    var(--clr-blinding-light) 63%,
+    var(--clr-background-tint) 63%,
+    var(--clr-background-tint) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+  line-height: normal;
+}
+
+.nav-span {
+  position: relative;
+}
+
+/* Creates the bar under the text */
+.nav-span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+  background: var(--clr-paragraph);
+  bottom: 0.31rem;
+  transition: all 0.2s ease-out;
+  border-radius: 0.125rem;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item-current {
+  background-position: 0 4px;
+  color: var(--clr-blinding-light);
+}
+
+.nav-span:hover::before,
+.nav-span:has(.nav-item:focus)::before,
+.nav-span-current::before {
+  transform: translateY(10px);
+  background: var(--clr-accent);
+}
+
+.nav-span-current:before {
+  height: 4px;
+  bottom: 6px;
+}
+
+/* ==========================
+      Media Queries
+========================== */
+
+/* 455px / 16 = 44em */
+@media only screen and (min-width: 29em) {
+  .nav-bar {
+    margin: 0 auto;
+    max-width: 120rem;
+    min-width: 29rem;
+    padding: 0 var(--spacing-48);
+  }
+}
+
+/* 
+    Mobile Safari automatically scales text if it thinks the text will render too small.
+    It was causing issues with the alinement of the .nav-span::before on mobile safari.
+    -webkit-text-size-adjust: 100%, fixes it 
+*/
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 
+    This removes the hover effect. It doesn't work/look good on mobile.
+  */
+  .nav-span:hover::before,
+  .nav-span:has(.nav-item:focus)::before {
+    transform: none;
+    background-color: inherit;
+  }
+}
