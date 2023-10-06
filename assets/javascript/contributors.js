@@ -193,6 +193,17 @@ const contributors = [
     likes: "Video games, cats, and movies",
     load_check: false,
   },
+  {
+    name: "Elena",
+    githubName: "ElenaBlundell",
+    location: "SD, USA",
+    favorite_ice_cream: "rusberry-lemon",
+    githubLink: "https://github.com/ElenaBlundell",
+    profileImage: "https://media.licdn.com/dms/image/D5603AQH3a8Y-aYJvag/profile-displayphoto-shrink_800_800/0/1688400491987?e=1701907200&v=beta&t=ZoHa65IgbvlV1y8VhtQGSAdVMi7YWitxYuuI-wxGIWw",
+    likes: "Hiking, rock climbing, board games",
+    load_check: false,
+  },
+  
 ];
 
 export { contributors };
