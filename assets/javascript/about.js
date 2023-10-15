@@ -2,7 +2,7 @@
 import { lightTheme, darkTheme, themeBtnHandler, timeOfDay } from './theme.js'
 
 // const themeBtnEl = document.querySelector('.theme-button');
-const themeSwitch = document.getElementById('theme-switch');
+const themeSwitch = document.querySelectorAll('#theme-switch');
 const currentTheme = JSON.parse(localStorage.getItem('currentTheme'));
 
 if (currentTheme) {
@@ -13,6 +13,11 @@ if (currentTheme) {
   timeOfDay(themeSwitch);
 }
 
-themeSwitch.addEventListener('click', () => {
-  themeBtnHandler(themeSwitch)
+// Watches both buttons for a click event
+const themeSwitchArray = Array.from(themeSwitch)
+
+themeSwitchArray.map(theme => {
+  theme.addEventListener('click', () => {
+    themeBtnHandler(themeSwitch)
+  })
 })

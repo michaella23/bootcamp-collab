@@ -5,30 +5,30 @@ const currentLocalTimeEl = document.getElementById('current-local-time');
 const greetingEl = document.querySelector('#greeting');
 
 setInterval(() => {
-    const currentLocalTime = new Date().toLocaleTimeString();
-    const date = new Date();
-    const hours = date.getHours();
+  const currentLocalTime = new Date().toLocaleTimeString();
+  const date = new Date();
+  const hours = date.getHours();
 
-    let timeOfDay;
-    let timeOfDayEmote;
+  let timeOfDay;
+  let timeOfDayEmote;
 
-    if (hours < 12) {
-        timeOfDay = "morning"
-        timeOfDayEmote = '🌄';
-    } else if (hours >= 12 && hours < 17) {
-        timeOfDay = "afternoon"
-        timeOfDayEmote = '🌅';
-    } else {
-        timeOfDay = "night"
-        timeOfDayEmote = '🌆';
-    }
-    // show current time
-    currentLocalTimeEl.textContent = `Local Time: ${currentLocalTime}`;
-    greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
+  if (hours < 12) {
+    timeOfDay = "morning"
+    timeOfDayEmote = '🌄';
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "afternoon"
+    timeOfDayEmote = '🌅';
+  } else {
+    timeOfDay = "night"
+    timeOfDayEmote = '🌆';
+  }
+  // show current time
+  currentLocalTimeEl.textContent = `Local Time: ${currentLocalTime}`;
+  greetingEl.textContent = `Good ${timeOfDay} ${timeOfDayEmote} bootcamp students!`
 }, 1000)
 
 // const themeBtnEl = document.querySelector('.theme-button');
-const themeSwitch = document.getElementById('theme-switch');
+const themeSwitch = document.querySelectorAll('#theme-switch');
 const currentTheme = JSON.parse(localStorage.getItem('currentTheme'));
 
 if (currentTheme) {
@@ -39,8 +39,11 @@ if (currentTheme) {
   timeOfDay(themeSwitch);
 }
 
-themeSwitch.addEventListener('click', () => {
-  themeBtnHandler(themeSwitch)
+// Watches both buttons for a click 
+const themeSwitchArray = Array.from(themeSwitch)
+
+themeSwitchArray.map(theme => {
+  theme.addEventListener('click', () => {
+    themeBtnHandler(themeSwitch)
+  })
 })
-
-
