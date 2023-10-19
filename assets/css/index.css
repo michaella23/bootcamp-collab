@@ -35,6 +35,16 @@
 }
 
 /* ===========================
+       page-container 
+=========================== */
+
+.page-container {
+  display: grid;
+  grid-template-columns: 100vw 60vw; /* Sets the side menu off screen to the left */
+  overflow-x: hidden;
+}
+
+/* ===========================
        header elements 
 =========================== */
 

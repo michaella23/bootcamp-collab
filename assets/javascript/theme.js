@@ -8,17 +8,22 @@ function darkTheme(btnEl) {
   // adds dark-mode class to body tag
   document.body.classList.add('dark-mode');
   // sets checkbox to checked if dark-mode is enabled
-  btnEl.checked = true;
+  // There are two checkboxes, so we need to use Array.from() to convert the NodeList to an array
+  Array.from(btnEl).map(btn => {
+    btn.checked = true;
+  })
+  // btnEl.checked = true;
+
 
   // document.body.style.color = "silver";
   // document.body.style.background = "var(--clr-maroon-overload-will-s-205)";
   // themeLnkEl.style.color="var(--clr-terracotta)";
   // themeLnkEl2.style.color="var(--clr-terracotta)";
-  
+
   // header theme switch
   // header.style.background = "var(--clr-maroon-overload-opacity-70)";
   // header.style.boxShadow = "0 0 5px var(--clr-blinding-light)";
-  
+
   // nav bar theme switch
   // for (let item of navItems) {
   //     item.style.color = "silver"
@@ -30,12 +35,16 @@ function lightTheme(btnEl) {
   // removes dark-mode class from body tag
   document.body.classList.remove('dark-mode');
   // removes checked from checkbox if dark-mode is not enabled
-  btnEl.checked = false;
+  // There are two checkboxes, so we need to use Array.from() to convert the NodeList to an array
+  Array.from(btnEl).map(btn => {
+    btn.checked = false;
+  })
+  // btnEl.checked = false;
   // document.body.style.color = "var(--clr-paragraph)";
   // document.body.style.background = "var(--clr-background-tint)";
   // themeLnkEl.style.color="var(--clr-paragraph)";
   // themeLnkEl2.style.color="var(--clr-paragraph)";
-  
+
   // header theme switch
   // header.style.background = "var(--clr-blueberry-pastel-tint-opacity-70)";
   // header.style.boxShadow = "0 0 5px var(--clr-shadow)";

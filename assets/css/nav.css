@@ -2,16 +2,43 @@
       Nav Styles
 ========================== */
 
+.main-container,
+.side-nav {
+  transition: transform 0.3s;
+  transition-timing-function: cubic-bezier(0.52, 0.18, 0.29, 0.78); /* custom */
+}
+
+.shift {
+  transform: translateX(-60vw);
+}
+
+.material-symbols-rounded {
+  font-size: 5rem;
+  color: var(--clr-blinding-light);
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 40;
+}
+
+.current {
+  color: var(--clr-accent);
+}
+
+.nav-desktop {
+  display: none;
+}
+
 .nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-24);
-  margin: 0 65px 0 auto;
-  align-items: center;
   width: 100%;
 }
 
+.nav-mobile {
+  display: flex;
+  gap: var(--spacing-24);
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .nav-item {
+  font-family: var(--typeface-karla);
   font-weight: var(--font-weight-700);
   font-size: var(--font-24);
   text-decoration: none;
@@ -71,16 +98,50 @@
 }
 
 /* ==========================
+      Side Nav
+========================== */
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--clr-blueberry-pastel-dark);
+  padding: 4rem 2rem;
+  box-shadow: -0.4rem 0 0.6rem -0.5rem var(--clr-shadow);
+}
+
+.switch-side-nav {
+  position: relative !important; /* !important is needed to override the index.css because nav is imported into it, index.css has more specificity */
+  margin-left: auto;
+}
+
+/* ==========================
       Media Queries
 ========================== */
 
-/* 455px / 16 = 44em */
-@media only screen and (min-width: 29em) {
+/* 768px / 16 = 49em */
+@media only screen and (min-width: 48em) {
   .nav-bar {
     margin: 0 auto;
     max-width: 120rem;
     min-width: 29rem;
     padding: 0 var(--spacing-48);
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+    gap: var(--spacing-24);
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
 

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootcamp Collab</title>
     <link rel="icecream icon" href="./assets/images/hero/hero-min.png" />
+    <!-- Google Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="../assets/css/about.css" />
     <script
@@ -18,63 +23,99 @@
     ></script>
   </head>
   <body>
-    <header class="header">
-      <nav class="nav-bar">
-        <span class="nav-span">
-          <a href="../index.html" class="nav-item">Home</a>
-        </span>
+    <div class="page-container">
+      <div class="main-container">
+        <header class="header">
+          <nav class="nav-bar">
+            <div class="nav-mobile">
+              <a href="../index.html">
+                <span class="material-symbols-rounded"> Home </span>
+              </a>
+              <a href="./about.html">
+                <span class="material-symbols-rounded current"> info </span>
+              </a>
+              <a href="#">
+                <span class="material-symbols-rounded menu-button"> menu </span>
+              </a>
+            </div>
+
+            <div class="nav-desktop">
+              <span class="nav-span nav-span-current">
+                <a href="../index.html"
+                  ><span class="nav-item nav-item-current"> Home </span>
+                </a>
+              </span>
+              <span class="nav-span">
+                <a href="./open-source-projects.html" class="nav-item"
+                  >Open Source Projects</a
+                >
+              </span>
+              <span class="nav-span">
+                <a href="./about.html" class="about">
+                  <span class="nav-item"> about </span>
+                </a>
+              </span>
+              <label class="switch">
+                <input type="checkbox" id="theme-switch" />
+                <span class="slider round theme-button"></span>
+                <span class="visually-hidden">Theme switch toggle</span>
+              </label>
+            </div>
+          </nav>
+        </header>
+
+        <section class="section-padding">
+          <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+            <iframe
+              style="position: absolute; width: 100%; height: 100%"
+              src="https://getyarn.io/yarn-clip/e781a98f-e18a-4db3-b7dd-8a5fc9aca4dd/embed?autoplay=false&responsive=true"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </section>
+        <footer class="section-padding section-footer">
+          <div class="container">
+            <div class="footer-text-box center-text">
+              <p class="done-by">
+                This project is done by
+                <a
+                  href="https://github.com/michaella23/bootcamp-collab"
+                  class="done-by--link"
+                  target="_blank"
+                >
+                  Scrimba Bootcamp Students
+                </a>
+                |
+                <!-- 
+                DON'T REMOVE THIS UNTIL CURRENT IMAGE IS REPLACED
+              -->
+                <a
+                  href="https://www.freepik.com/author/catalyststuff"
+                  target="_blank"
+                  class="done-by--link link-color"
+                >
+                  Images by catalyststuff
+                </a>
+                on Freepik
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="side-nav">
+        <label class="switch switch-side-nav">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider round theme-button"></span>
+          <span class="visually-hidden">Theme switch toggle</span>
+        </label>
         <span class="nav-span">
           <a href="./open-source-projects.html" class="nav-item"
             >Open Source Projects</a
           >
         </span>
-        <span class="nav-span nav-span-current">
-          <a href="./about.html" class="nav-item nav-item-current">About</a>
-        </span>
-        <label class="switch">
-          <input type="checkbox" id="theme-switch" />
-          <span class="slider round theme-button"></span>
-          <span class="visually-hidden">Theme switch toggle</span>
-        </label>
-      </nav>
-    </header>
-    <section class="section-padding">
-      <div style="position: relative; width: 100%; padding-bottom: 56.25%">
-        <iframe
-          style="position: absolute; width: 100%; height: 100%"
-          src="https://getyarn.io/yarn-clip/e781a98f-e18a-4db3-b7dd-8a5fc9aca4dd/embed?autoplay=false&responsive=true"
-          frameborder="0"
-        ></iframe>
       </div>
-    </section>
-    <footer class="section-padding section-footer">
-      <div class="container">
-        <div class="footer-text-box center-text">
-          <p class="done-by">
-            This project is done by
-            <a
-              href="https://github.com/michaella23/bootcamp-collab"
-              class="done-by--link"
-              target="_blank"
-            >
-              Scrimba Bootcamp Students
-            </a>
-            |
-            <!-- 
-                      DON'T REMOVE THIS UNTIL CURRENT IMAGE IS REPLACED
-                  -->
-            <a
-              href="https://www.freepik.com/author/catalyststuff"
-              target="_blank"
-              class="done-by--link link-color"
-            >
-              Images by catalyststuff
-            </a>
-            on Freepik
-          </p>
-        </div>
-      </div>
-    </footer>
+    </div>
     <script src="../assets/javascript/about.js" type="Module"></script>
+    <script src="../assets/javascript/nav.js"></script>
   </body>
 </html>
